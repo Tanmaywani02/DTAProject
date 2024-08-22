@@ -1,38 +1,8 @@
-/* 
-.top{
-    display: inline;
-    background-color: blue;
-    padding: 5px;
-}
-
-#logo{
-    padding-right: 50px;
-    place-content: 5px;
-    float:left
-}
-#searchdiv{
-    background-color: red;
-    
-    width: 500px;
-}
-#search{
-    
-    width: 60%
-}
-#icons{
-    float: right;
-    color: blue;
-    display: flex;
-   
-    background-color: black;
-} */
 .header {
-  /* background-color: blue; */
   width: 100%;
 }
 
 .top {
-  /* background-color: red; */
   display: flex;
   margin-left: 150px;
   margin-right: 150px;
@@ -43,11 +13,10 @@
 #searchdiv {
   margin-left: auto;
   margin-right: auto;
-  /* background-color: black; */
 }
+
 #iconsdiv {
   margin-left: 20px;
-  /* margin-top: 25px; */
   display: flex;
   gap: 25px;
   color: blue;
@@ -57,7 +26,6 @@
   width: 500px;
   margin-bottom: auto;
   background-color: black;
-  /* width: 360px; */
   border: 1px solid #555;
   border-radius: 20px;
   display: block;
@@ -71,36 +39,33 @@
   background-color: deepskyblue;
   margin-left: 0px;
   margin-right: 0px;
-  /* justify-content: center; */
   align-items: center;
 }
+
 #catlist li {
   list-style-type: none;
-  /* margin: 10px; */
-  /* padding: 0px; */
-  /* float: left; */
   padding-right: 10px;
   margin-left: 0px;
-
-  /* padding-right: 8px; */
 }
+
 #catlist li a {
   color: white;
   text-decoration: none;
 }
+
 #neworder {
   color: white;
   background-color:goldenrod;
   font-weight: bold;
   border-radius: 20px;
-  /* padding-left: 15px;
-    padding-top: 5px; */
   padding: 5px 15px;
   text-decoration: none;
 }
+
 #orderdiv {
   margin-left: 620px;
 }
+
 #catlist {
   display: flex;
   margin-left: 110px;
