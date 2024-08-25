@@ -1,22 +1,30 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
 .header {
   width: 100%;
 }
 
 .top {
   display: flex;
-  margin-left: 150px;
-  margin-right: 150px;
+  /* margin-left: 150px;
+  margin-right: 150px; */
+  margin: auto;
+  gap: 250px;
+
   justify-content: center;
   align-items: center;
 }
 
 #searchdiv {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 #iconsdiv {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   display: flex;
   gap: 25px;
   color: blue;
@@ -24,13 +32,13 @@
 
 #searchbar {
   width: 500px;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
   background-color: black;
   border: 1px solid #555;
   border-radius: 20px;
   display: block;
   padding: 9px 4px 9px 40px;
-  background: transparent url("images/search_icon.svg") no-repeat 450px;
+  background: transparent url("images/search_icon.svg") no-repeat 10px;
 }
 
 #menu {
@@ -70,4 +78,136 @@
   display: flex;
   margin-left: 110px;
   gap: 20px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.list{
+  padding: 20px;
+  background-color: #e4e4fa;
+  border-radius: 10px;
+}
+.titles{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+.activitytitles{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.activitycards{
+  /* border: 2px solid black; */
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+}
+.cards{
+  /* border: 2px solid black; */
+  height: 500px;
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+.accountActivity{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.recommend{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.topcategory{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.newitems{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.buybeforeoff{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.exclusivebrand{
+  margin: auto;
+  width: 1300px;
+  
+  padding: 10px 50px;
+  
+}
+.info{
+  display: flex;
+ justify-content: space-between;
+ margin-top: 5px;
+ padding: 3px;
+  /* background-color: red; */
+}
+.save{
+  color: #3B3B98;
+  background-color: white;
+  width: 25%;
+}
+
+.cart{
+  background-color: #3B3B98;
+  color: white;
+  width: 60%;
+}
+
+h2{
+  
+  margin-bottom: 20px;
+}
+h3{
+  
+  margin-bottom: 10px;
+}
+table{
+  /* background-color: yellow; */
+  padding: 10px; 
+  margin-left: 10px;
+  border-spacing: 3px;   
+
+}
+td{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* background-color: red; */
+  padding: 0px 20px;
+  height: 23px;
+  /* gap: 20px; */
+}
+input{
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+p{
+  margin-bottom: 10px;
+  padding: 3px;
+}
+img{
+  border-radius: 10px;
 }

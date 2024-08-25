@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .list{
+            padding: 20px;
+            background-color: #e4e4fa;
+            border-radius: 10px;
+        }
+        .titles{
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+        .activitytitles{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .activitycards{
+            /* border: 2px solid black; */
+            height: 150px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .cards{
+            /* border: 2px solid black; */
+            height: 500px;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+        .accountActivity{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .recommend{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .topcategory{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .newitems{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .buybeforeoff{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .exclusivebrand{
+            margin: auto;
+            width: 1300px;
+            
+            padding: 10px 50px;
+            
+        }
+        .info{
+            display: flex;
+           justify-content: space-between;
+           margin-top: 5px;
+           padding: 3px;
+            /* background-color: red; */
+        }
+        .save{
+            color: #3B3B98;
+            background-color: white;
+            width: 25%;
+        }
+        
+        .cart{
+            background-color: #3B3B98;
+            color: white;
+            width: 60%;
+        }
+        
+        h2{
+            
+            margin-bottom: 20px;
+        }
+        h3{
+            
+            margin-bottom: 10px;
+        }
+        table{
+            /* background-color: yellow; */
+            padding: 10px; 
+            margin-left: 10px;
+            border-spacing: 3px;   
+        
+        }
+        td{
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* background-color: red; */
+            padding: 0px 20px;
+            height: 23px;
+            /* gap: 20px; */
+        }
+        input{
+            font-size: 15px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        p{
+            margin-bottom: 10px;
+            padding: 3px;
+        }
+        img{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="productList">
+        <div class="carousel">
+            <!-- Carousel will go here -->
+        </div>
+
+        <div class="accountActivity">
+            <h2>My Account Activity</h2>
+            <div class="list">
+                <h3> Recent Order</h3>
+                <div class="activitytitles">
+                
+                    <div class="activitycards card1">
+                        <table>
+                            <tr>
+                                <td>OrderNo</td>
+                                
+                                <td>#000000</td>
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td>$1234</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Purchase Date
+                                </td>
+                                <td>
+                                    12/08/2024
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Status
+                                </td>
+                                <td>
+                                    Delivered
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Date
+                                </td>
+                                <td>
+                                    11/07/2024
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="activitycards card2">
+                        <table>
+                        <tr>
+                            <td>OrderNo</td>
+                            
+                            <td>#000000</td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td>$1234</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Purchase Date
+                            </td>
+                            <td>
+                                12/08/2024
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Delivery Status
+                            </td>
+                            <td>
+                                Delivered
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Delivery Date
+                            </td>
+                            <td>
+                                11/07/2024
+                            </td>
+                        </tr>
+                    </table></div>
+                    <div class="activitycards card3">
+                        <table>
+                            <tr>
+                                <td>OrderNo</td>
+                                
+                                <td>#000000</td>
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td>$1234</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Purchase Date
+                                </td>
+                                <td>
+                                    12/08/2024
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Status
+                                </td>
+                                <td>
+                                    Delivered
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Date
+                                </td>
+                                <td>
+                                    11/07/2024
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="activitycards card4">
+                        <table>
+                            <tr>
+                                <td>OrderNo</td>
+                                
+                                <td>#000000</td>
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td>$1234</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Purchase Date
+                                </td>
+                                <td>
+                                    12/08/2024
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Status
+                                </td>
+                                <td>
+                                    Delivered
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Delivery Date
+                                </td>
+                                <td>
+                                    11/07/2024
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommend">
+            <h2>Recommend for You</h2>
+            <div class="list">
+                <div class="titles">
+                    <div class="cards card1">
+                       <img src="images/Iron Man Wallpaper.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card2">
+                        <img src="images/lD6eNS6-space-star-background.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card3">
+                        <img src="images/white_batman_logo_in_black_background_hd_batman-1920x1080.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save"> 
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="topcategory">
+            <h2>Top Category</h2>
+            <div class="list">
+                <div class="titles">
+                    <div class="cards card1">
+                       <img src="images/Iron Man Wallpaper.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card2">
+                        <img src="images/lD6eNS6-space-star-background.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card3">
+                        <img src="images/white_batman_logo_in_black_background_hd_batman-1920x1080.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save"> 
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="newitems">
+            <h2>New Items</h2>
+            <div class="list">
+                <div class="titles">
+                    <div class="cards card1">
+                       <img src="images/Iron Man Wallpaper.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card2">
+                        <img src="images/lD6eNS6-space-star-background.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card3">
+                        <img src="images/white_batman_logo_in_black_background_hd_batman-1920x1080.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save"> 
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="buybeforeoff">
+            <h2>Buy Before They Go Off The Shelf</h2>
+            <div class="list">
+                <div class="titles">
+                    <div class="cards card1">
+                       <img src="images/Iron Man Wallpaper.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card2">
+                        <img src="images/lD6eNS6-space-star-background.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card3">
+                        <img src="images/white_batman_logo_in_black_background_hd_batman-1920x1080.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save"> 
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="exclusivebrand">
+            <h2>Shop Exclusive Brand</h2>
+            <div class="list">
+                <div class="titles">
+                    <div class="cards card1">
+                       <img src="images/Iron Man Wallpaper.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card2">
+                        <img src="images/lD6eNS6-space-star-background.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save">
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    <div class="cards card3">
+                        <img src="images/white_batman_logo_in_black_background_hd_batman-1920x1080.jpg" alt="" width="100%" height="70%">
+                       <div class="info">
+                            <h3>Dish Name</h3>
+                            <h2>$12134</h2>
+                       </div>
+                       <p>Lorem ipsum dolor sit amet consectetur.</p>
+                       <div class="info">
+                        <input type="button" value="Save" class="save"> 
+                        <input type="button" value="Add To Cart" class="cart">
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
