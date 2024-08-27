@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <link rel="stylesheet" href="footerstyle.css" />
-  </head>
-  <body>
-    <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>COMPANY</h4>
-          <ul class="links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Brands</a></li>
-            <li><a href="#">News Feed</a></li>
-            <li><a href="#">Eat Local Eat Often</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>OUR SERVICES</h4>
-          <ul class="links">
-            <li><a href="#">MenuMax</a></li>
-            <li><a href="#">HOST Services</a></li>
-            <li><a href="#">Culinary Resource Team</a></li>
-            <li><a href="#">Newsletter</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Documt</title>
+    <style>
+        .footer-container{
+            /* display: flex;
+            justify-items: center; */
+            background-color: #182C61;
+            height: 300px;
+            color: white;
+        }
+        .footer-links{
+            display: flex;
+            justify-content: center;
+            width: 1300px;
+            display: grid;
+            grid-template: repeat(5,30px) / repeat(5,250px);
+            padding: 5px;
+            margin: auto;
+        }
+        .items{
+            padding: 10px;
+            /* background-color: red; */
+            /* border: 1px solid black; */
+        }
+        .head{
+            /* gap: 20px; */
+            /* background-color: red; */
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .footer-copyright{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            width: 1300px;
+            /* margin: auto; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer-container">
+        <div class="footer-links">
+            <div class="items item1 head">COMPANY</div>
+            <div class="items item2 head">OUR SERVICES</div>
+            <div class="items item3 head">CUSTOMER SUPPORT</div>
+            <div class="items item4 head">POLICY & TERMS</div>
+            <div class="items item5 head">FOLLOW US</div>
             
-          </ul>
+            <div class="items item6">About Us</div>
+            <div class="items item7">7</div>
+            <div class="items item8">8</div>
+            <div class="items item9">9</div>
+            <div class="items item10">10</div>
+           
+            <div class="items item11">Our Brands</div>
+            <div class="items item12">12</div>
+            <div class="items item13">13</div>
+            <div class="items item14">14</div>
+            <div class="items item15">15</div>
+           
+            <div class="items item16">News Feed</div>
+            <div class="items item17">17</div>
+            <div class="items item18">18</div>
+            <div class="items item19">19</div>
+            <div class="items item20">20</div>
+            
+            <div class="items item21">Eat Local Eat Often</div>
+            <div class="items item22">22</div>
+            <div class="items item23">23</div>
+            <div class="items item24">24</div>
+            <div class="items item25">25</div>
+            
         </div>
+        <div class="footer-copyright">
+            
+            <img src="images/logo.png" alt="" height="35px">
 
-        <div class="footer-col">
-          <h4>CUSTOMER SUPPORT</h4>
-          <ul class="links">
-            <li><a href="#">Contact your Sales Rep</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Site Feedback</a></li>
-          </ul>
-        </div>
+            <div>
+                <p>&copy Copyright | Tanmay Wani, Durgesh Vishwakarma</p>
+            </div>
 
-        <div class="footer-col">
-            <h4>POLICY & TERMS</h4>
-            <ul class="links">
-                <li><a href="#">License Agreement</a></li>
-
-        </div>
-
-        <div class="footer-col">
-            <h4>FOLLOW US</h4>
             <div class="icons">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-linkedin"></i>
                 <i class="fa-brands fa-github"></i>
-              </div>
-
+            </div>
         </div>
-
-        <div class="footer-col">
-          <h4>SIGN UP</h4>
-          <p>Receive exclusive email only <br> promotions and offers </p>
-          <form action="#">
-            <ul class="links">
-            <li><input type="text" placeholder="Your email" required></li>
-            <li><button type="submit">SUBSCRIBE</button></li></ul>
-          </form>
-          
-        </div>
-      </div>
-    </section>
-  </body>
+    </footer>
+</body>
 </html>
