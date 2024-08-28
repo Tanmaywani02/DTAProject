@@ -13,6 +13,7 @@
             background-color: #8EC5FC;
             background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
         }
+       
     </style>
 </head>
 
@@ -44,112 +45,66 @@
         </nav>
       </div>
 
-    <div class="container  vh-120 py-5 ">
+    <div class="container  vh-100 py-5 ">
 
-        <h1 class="d-flex justify-content-center text-black">Customer Registration Form</h1>
+        <h1 class="d-flex justify-content-center text-black">Login Form</h1>
         <div class="m-5 d-flex justify-content-center">
-            <form class="border border-black p-5 border-4 rounded-5 w-100 ">
-                <div class="row mb-3 ">
-                    <div class="col-6 ">
-                        <label class="form-label fs-5" for="firstName">First Name</label>
-                        <input type="text" id="firstName" class="form-control form-control-lg d-inline-flex focus-ring focus-ring-dark text-decoration-none border rounded-2 " />
-                    </div>
-                    <div class="col-6">
-                        <label class="form-label fs-5" for="lastName">Last Name</label>
-                        <input type="text" id="lastName" class="form-control form-control-lg" />
+            <form class="border border-black p-5 border-4 rounded-5 w-50 ">
+
+                <div class="row mb-3">
+
+
+                    <div><label class="form-label fs-5" for="username">Username </label>
+                        <input type="text" id="userName" class="form-control form-control-lg" />
                     </div>
 
                 </div>
                 <div class="row mb-3">
-                    <div class="col-6">
-                        <label class="form-label fs-5" for="username">Username </label>
-                        <input type="text" id="userName" class="form-control form-control-lg" />
-                    </div>
-                    <div class="col-6">
+                    <div>
                         <label class="form-label fs-5" for="password">Password</label>
                         <input type="password" id="password" class="form-control form-control-lg" />
                     </div>
+
                 </div>
-                <div class="row mb-3">
-                    <div class="col-6">
-                        <label class="form-label fs-5" for="age">Age </label>
-                        <input type="number" id="age" class="form-control form-control-lg" />
-                    </div>
-                    <div class="col-6">
-                        <label class="form-label fs-5" for="email">Email</label>
-                        <input type="email" id="email" class="form-control form-control-lg" />
-                    </div>
-                </div>
+
+
 
                 <div class="row">
-                    <div class="col-6">
-
-                        <select class="form-select fs-5 mt-4" aria-label="Default select example">
-                            <option>Select Qualification</option>
-                            <option value="1">10th</option>
-                            <option value="2">12th</option>
-                            <option value="3">Graduation</option>
-                            <option value="3"> Post-Graduation</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <select class="form-select fs-5 mt-4" aria-label="Default select example">
-                            <option>Choose Language</option>
-                            <option value="1">English</option>
-                            <option value="2">Hindi</option>
-                            <option value="3">Marathi</option>
-                            <option value="3">Gujarati</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 fs-5 mt-4">
-                        <label class="form-label" for="gender">Gender : </label>
-                        <!-- <input type="radio" id="gender" class="form-control form-control-lg" /> -->
-                        <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Male
-                        </label>
-                        <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Female
-                        </label>
-                    </div>
-                    <div class="col-6 fs-5 mt-4">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <div> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            Have you cleared all formalities
+                            Remember me
                         </label>
                     </div>
+
+
                 </div>
 
 
-                <div class="row">
-                    <div class="col-6 fs-5 mt-4">
-                        <label class="form-label" for="resume">Resume Upload</label>
-                        <input type="file" id="resume" class="form-control form-control-lg" />
-                    </div>
-                    <div class="col-6 fs-5 mt-4">
-                        <label class="form-label" for="comment">Comments</label>
-                        <textarea class="form-control" placeholder="Leave a comment here"
-                            id="floatingTextarea"></textarea>
-                    </div>
 
-                </div>
 
-                <div class="button d-flex justify-content-around fs-5 mt-4">
+                <div class="button d-flex justify-content-center fs-5 mt-4">
                     <button type="submit" class="btn btn-success w-25">Submit</button>
-                    <button type="reset" class="btn btn-danger w-25">Reset</button>
+
                 </div>
 
+
+                <div class="row mt-4">
+                    <a href="boot2.html" class="d-flex justify-content-around">
+                        New User ?
+                    </a>
+
+                </div>
+                <div class="row">
+                    <a href="boot4.html" class="d-flex justify-content-around">
+                        Forget password ?
+                    </a>
+                </div>
             </form>
         </div>
 
 
 
     </div>
-
 
 
 
@@ -204,6 +159,7 @@
             </div>
         </div>
       </footer>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
