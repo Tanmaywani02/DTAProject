@@ -1,0 +1,34 @@
+.card-body{
+  display: block;
+  height: 100%;
+  flex-direction: column;
+}
+.card .img-fit{
+  aspect-ratio: 1/1;
+  object-fit: fit;
+}
+.card-title{
+    margin-top: 0.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn_add{
+   background-color: #3B3B98;
+   color: white;
+}
+.btn_add:hover{
+   background-color: #182C61;
+   color: white;
+}
