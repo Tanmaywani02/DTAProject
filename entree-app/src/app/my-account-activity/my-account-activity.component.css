@@ -1,0 +1,20 @@
+ 
+.list{
+  padding: 10px;
+  background-color: #e4e4fa;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.activitycards{
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 5px 20px 0px 20px;
+  margin: 10px 0px;
+  background-color: white;
+}  
+

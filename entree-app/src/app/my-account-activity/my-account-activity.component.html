@@ -1,0 +1,33 @@
+<div class="accountActivity container mt-4">
+    <h2>My Account Activity</h2>
+    <div class="list">
+      <h4> Recent Order</h4>
+      <div class="activitytitles">
+
+        <div class="container ">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col" *ngFor="let ao of activityorders">
+                    
+                    <div class="activitycards card1 ">
+                        <div class="chead">
+                            <p>Order No.</p>
+                            <p>Date</p>
+                            <p>Status</p>
+                        </div>
+                        <div class="cbody">
+                            <p>{{ao.id}}</p>
+                            <p>{{ao.date}}</p>
+                            <p>{{ao.status}}</p>
+
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ 
