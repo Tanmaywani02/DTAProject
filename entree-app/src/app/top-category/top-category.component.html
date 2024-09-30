@@ -1,0 +1,22 @@
+<div class="container mt-5" id="topcategory">
+    <h2 class="text">Top Category</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-4">
+        <div *ngFor="let tc of topcat" class="card1">
+            <div class="card mt-4">
+                <img src={{tc.image}} class="card-img-top img-fit p-2" alt={{tc.title}}>
+                <div class="card-body">
+                    <span class="badge bg-success ">In Stock</span>
+                    <div class="">
+                        <h5 class="card-title">{{tc.title}}</h5>
+                        <p class="card-text fs-6">${{tc.price}} M.R.P. <del>${{tc.price+100}}</del></p>
+                    </div>
+                    <p class="card-text fs-6 text-justify p_des">{{tc.description}}</p>
+                    <div class="d-flex justify-content-between mt-2">
+                        <a href="" class="btn btn-outline-secondary"><img src="../../assets/bookmark.svg" alt="icon" width="35" height="30" class=""></a>
+                        <button type="button" class="btn btn_add px-4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

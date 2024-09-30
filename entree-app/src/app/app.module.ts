@@ -9,6 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
+import { RecommendComponent } from './recommend/recommend.component';
+import { TopCategoryComponent } from './top-category/top-category.component';
+import { NewItemsComponent } from './new-items/new-items.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { RegisterComponent } from './register/register.component';
     CarouselComponent,
     MyAccountActivityComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    RecommendComponent,
+    TopCategoryComponent,
+    NewItemsComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
