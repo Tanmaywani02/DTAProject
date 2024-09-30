@@ -1,6 +1,6 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 #searchbar {
   width: 500px;
@@ -19,164 +19,141 @@
   display: none;
 }
 #menu {
-    height: 50px;
-    background-color: #3B3B98;
-    display: flex;
-    align-content: center;
-    justify-content:space-between;
-    align-items: center;
-    
-  }
-  #catlist {
-    display: flex;
-    /* gap: 50px; */
+  height: 50px;
+  background-color: #3b3b98;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#catlist {
+  display: flex;
+  /* gap: 50px; */
+}
 
-    
-    
-  
-  }
+#catlist li {
+  margin-top: 10px;
+  list-style-type: none;
+  list-style: none;
 
-  #catlist li {
-    margin-top: 10px;
-    list-style-type:none;
-    list-style: none;
-    
-    padding-right: 30px;
-  
-    align-items: center;
- 
-    
-    
-  }
-  
-  #catlist li a {
-    color: white;
-    text-decoration: none;
+  padding-right: 30px;
 
-  }
-  
-  #neworder {
-    color: white;
-    background-color:goldenrod;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 5px 15px;
-    text-decoration: none;
-  }
-  
-  #orderdiv {
-    margin-left: 620px;
-    
-  }
-  
-  .car_img{
-    
-    object-fit:cover;
-    width: 100%;
-    /* height: 75%; */
-  }
+  align-items: center;
+}
 
- .carousel-inner {
-    height: 550px;
- }
+#catlist li a {
+  color: white;
+  text-decoration: none;
+}
 
+#neworder {
+  color: white;
+  background-color: goldenrod;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
 
- 
- .list{
-    padding: 10px;
-    background-color: #e4e4fa;
-    border-radius: 10px;
-    margin-top: 30px;
-  }
-  .titles{
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-  }
-  .activitytitles{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
-  .activitycards{
-    border: 2px solid black;
-    height: 150px;
-    width: 300px;
-    border-radius: 10px;
-    background-color: white;
-  }
-  td{
-    padding-left: 30px;
-  }
-  
-  .card-body{
-    display: block;
-    height: 100%;
-    flex-direction: column;
-  }
-  .card .img-fit{
-    aspect-ratio: 1/1;
-    object-fit: fit;
-  }
-  .card-title{
-    margin-top: 0.2rem;
-  }
+#orderdiv {
+  margin-left: 620px;
+}
 
- .btn_add{
-    background-color: #3B3B98;
-    color: white;
- }
- .btn_add:hover{
-    background-color: #182C61;
-    color: white;
- }
- /* .p_des{
+.car_img {
+  object-fit: cover;
+  width: 100%;
+  /* height: 75%; */
+}
+
+.carousel-inner {
+  height: 550px;
+}
+
+.list {
+  padding: 10px;
+  background-color: #e4e4fa;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.titles {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+.activitytitles {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.activitycards {
+  border: 2px solid black;
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+}
+td {
+  padding-left: 30px;
+}
+
+.card-body {
+  display: block;
+  height: 100%;
+  flex-direction: column;
+}
+.card .img-fit {
+  aspect-ratio: 1/1;
+  object-fit: fit;
+}
+.card-title {
+  margin-top: 0.2rem;
+}
+
+.btn_add {
+  background-color: #3b3b98;
+  color: white;
+}
+.btn_add:hover {
+  background-color: #182c61;
+  color: white;
+}
+/* .p_des{
      text-align: justify; 
  } */
 
+.footer-container {
+  margin-top: 50px;
+  background-color: #182c61;
+  height: 300px;
+  color: white;
+}
+.footer-links {
+  justify-content: center;
 
- .footer-container{
-    margin-top: 50px;
-    background-color: #182C61;
-    height: 300px;
-    color: white;
+  display: grid;
+  grid-template: repeat(5, 30px) / repeat(5, 250px);
+  padding: 5px;
+}
+.items {
+  padding: 10px;
+  margin-top: 20px;
+}
+.head {
+  font-weight: bold;
+}
+.footer-copyright {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  width: 1200px;
 
-  }
-  .footer-links{
-   
-   
-    justify-content: center;
-    
-    display: grid;
-    grid-template: repeat(5,30px) / repeat(5,250px);
-    padding: 5px;
-    
-  }
-  .items{
-    padding: 10px;
-    margin-top: 20px;
-  }
-  .head{
-   
-    font-weight: bold;
-    
-  }
-  .footer-copyright{
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-    width: 1200px;
-  
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .fav_img{
-  
-   
-    filter: invert(1);
-    
-  }
-  .itm{
-    margin-top: 40px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+}
+.fav_img {
+  filter: invert(1);
+}
+.itm {
+  margin-top: 40px;
+}

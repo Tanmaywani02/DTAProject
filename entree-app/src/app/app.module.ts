@@ -14,6 +14,7 @@ import { TopCategoryComponent } from './top-category/top-category.component';
 import { NewItemsComponent } from './new-items/new-items.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
     TopCategoryComponent,
     NewItemsComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
