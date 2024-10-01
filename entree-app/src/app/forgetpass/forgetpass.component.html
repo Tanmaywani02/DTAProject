@@ -14,7 +14,8 @@
                   type="text"
                   id="email"
                   class="form-control form-control"
-                
+                  [(ngModel)]="email"
+                  name="email"
                   required
                 />
               </div>
@@ -29,7 +30,8 @@
                   type="text"
                   id="password"
                   class="form-control form-control"
-                 
+                  [(ngModel)]="security_code"
+                  name="security_code"
                   required
                 />
               </div>
@@ -38,15 +40,15 @@
          
   
             <div class="button  fs-2 mt-4">
-              <button type="submit" class="btn btn-success w-25">Get Password</button>
+              <button type="submit" class="btn btn-success w-25" (click)="getdata(email,security_code)">Get Password</button>
             </div>
   
             <div class="row mt-4 ">
-           <p class="reg_para"> New User ?  <a href="/signup" class=""> Signup  </a></p>
+           <p class="reg_para"> New User ?  <a routerLink="/signup" class=""> Signup  </a></p>
             </div>
             <div class="row ">
                 <p class="reg_para">
-                  Already have acount ? <a href="/login" class=""> Login </a>
+                  Already have acount ? <a routerLink="/login" class=""> Login </a>
                 </p>
               </div>
          

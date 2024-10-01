@@ -9,11 +9,13 @@
            
             <div class="row mb-3">
               <div>
-                <label class="form-label fs-6" for="email">Email </label>
+                <label class="form-label fs-6" for="email" >Email  </label>
                 <input
                   type="text"
                   id="email"
                   class="form-control form-control"
+                  [(ngModel)]="email"
+                  name="email"
                   required
                 />
               </div>
@@ -28,6 +30,8 @@
                   type="password"
                   id="password"
                   class="form-control form-control"
+                  [(ngModel)]="password"
+                  name="password"
                   required
                 />
               </div>
@@ -36,12 +40,12 @@
          
   
             <div class="button  fs-2 mt-4">
-              <button type="submit" class="btn btn-success w-25">Login</button>
+              <button type="submit" class="btn btn-success w-25" (click)="getdata(email,password)">Login</button>
             </div>
   
             <div class="row mt-4 ">
-              <p class="reg_para"> Forgot Password ?  <a href="/forgetpassword" class="" > Click here  </a></p>
-           <p class="reg_para"> New User ?  <a href="/signup" class="" > Signup  </a></p>
+              <p class="reg_para"> Forgot Password ?  <a routerLink="/forgetpassword" class="" > Click here  </a></p>
+           <p class="reg_para"> New User ?  <a routerLink="/signup" class="" > Signup  </a></p>
             </div>
          
           </form>
