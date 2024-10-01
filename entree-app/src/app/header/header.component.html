@@ -1,3 +1,149 @@
+<div class="cart" id="cart" *ngIf="isVisible">
+  <div class="h4_cart">
+    <h4 class="">Shopping cart</h4>
+    <button
+      type="button"
+      class="btn-close"
+      id="btn-close"
+      aria-label="Close"
+      (click)="closeButton()"
+    ></button>
+  </div>
+  <div class="container container_cart">
+    <div class="tiles_cart">
+      <img
+        src="../../assets/login.jpg"
+        width="70px"
+        height="80px"
+        style="cursor: pointer"
+      />
+
+      <div class="cartitems">
+        <div>
+          <h5>Orange</h5>
+          <h6>Price : $ 20</h6>
+        </div>
+        <div>
+          <p class="count_cart">
+            <span
+              ><img
+                src="../../assets/minus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="decrease()"
+            /></span>
+            {{ count }}
+            <span
+              ><img
+                src="../../assets/plus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="increase()"
+            /></span>
+          </p>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn-close"
+        id="remove_cart"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <div class="tiles_cart">
+      <img
+        src="../../assets/login.jpg"
+        width="70px"
+        height="80px"
+        style="cursor: pointer"
+      />
+
+      <div class="cartitems">
+        <div>
+          <h5>Orange</h5>
+          <h6>Price : $ 20</h6>
+        </div>
+        <div>
+          <p class="count_cart">
+            <span
+              ><img
+                src="../../assets/minus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="decrease()"
+            /></span>
+            {{ count }}
+            <span
+              ><img
+                src="../../assets/plus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="increase()"
+            /></span>
+          </p>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn-close"
+        id="remove_cart"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="tiles_cart">
+      <img
+        src="../../assets/login.jpg"
+        width="70px"
+        height="80px"
+        style="cursor: pointer"
+      />
+
+      <div class="cartitems">
+        <div>
+          <h5>Orange</h5>
+          <h6>Price : $ 20</h6>
+        </div>
+        <div>
+          <p class="count_cart">
+            <span
+              ><img
+                src="../../assets/minus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="decrease()"
+            /></span>
+            {{ count }}
+            <span
+              ><img
+                src="../../assets/plus.png"
+                width="20px"
+                style="cursor: pointer"
+                (click)="increase()"
+            /></span>
+          </p>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn-close"
+        id="remove_cart"
+        aria-label="Close"
+      ></button>
+    </div>
+    
+    <div class="btn_parent">
+      <button class="btn cart_btn_checkout">Checkout</button>
+    </div>
+
+
+
+  </div>
+</div>
+
 <header id="header">
      <div class="container-fluid topbar">
         <nav class=" container d-flex justify-content-between pt-2 pb-2">
