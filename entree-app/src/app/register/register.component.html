@@ -15,6 +15,7 @@
                 type="text"
                 id="name"
                 class="form-control form-control"
+                placeholder="Enter Your Name"
                 required
               />
             </div>
@@ -26,6 +27,9 @@
                 type="text"
                 id="email"
                 class="form-control form-control"
+                placeholder="Enter your Email"
+                [(ngModel)]="email"
+                name="email"
                 required
               />
             </div>
@@ -33,11 +37,14 @@
 
           <div class="row mb-3">
             <div>
-              <label class="form-label fs-6" for="pnumber">Phone Number</label>
+              <label class="form-label fs-6" for="security_code">Security Code</label>
               <input
-                type="number"
+                type="text"
                 id="pnumber"
                 class="form-control form-control"
+                placeholder="Create a Security Code *"
+                [(ngModel)]="security_code"
+                name="security_code"
                 required
               />
             </div>
@@ -50,6 +57,9 @@
                 type="password"
                 id="password"
                 class="form-control form-control"
+                placeholder="Create Password"
+                [(ngModel)]="password"
+                name="password"
                 required
               />
             </div>
@@ -63,18 +73,21 @@
                 type="password"
                 id="cnfpassword"
                 class="form-control form-control"
+                placeholder="Re-enter Password"
+                [(ngModel)]="psw_repeat"
+                name="psw_repeat"
                 required
               />
             </div>
           </div>
 
           <div class="button fs-2 mt-4">
-            <button type="submit" (onclick)="dashboard()" class="btn btn-success w-25">SignUp</button>
+            <button type="submit" (click)="createAccount(email,password,psw_repeat,security_code)" class="btn btn-success w-25">SignUp</button>
           </div>
 
           <div class="row mt-4">
             <p class="reg_para">
-              Already have acount ? <a href="/login" class=""> Login </a>
+              Already have acount ? <a routerLink="/login" class=""> Login </a>
             </p>
           </div>
         </form>
