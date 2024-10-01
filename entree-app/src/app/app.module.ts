@@ -15,6 +15,8 @@ import { NewItemsComponent } from './new-items/new-items.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
+import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HeaderComponent } from './header/header.component';
     MyAccountActivityComponent,
     FooterComponent,
     RegisterComponent,
+    LoginComponent,
+    ForgetpassComponent,
     RecommendComponent,
     TopCategoryComponent,
     NewItemsComponent,
