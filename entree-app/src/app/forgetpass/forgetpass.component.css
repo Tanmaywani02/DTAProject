@@ -2,13 +2,13 @@ form {
   background-color: #e4e4fa;
 }
 .container {
- 
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 20px;
   padding: 0%;
 }
@@ -21,7 +21,6 @@ form {
 }
 .loginform {
   width: 70%;
-  
 }
 .loginform form {
   width: 70%;
@@ -33,24 +32,19 @@ form {
 }
 .loginimage {
   padding: 0px 30px;
-  
 }
 .loginimage img {
   border-radius: 30px;
   padding: 20px;
-  height: 600px;
+  height: 500px;
   width: 100%;
- 
 }
-
 
 .reg_para {
   text-align: center;
 }
 
-
 input:focus {
-  
   border: 2px solid black;
   border-radius: 5px;
   outline: black;
