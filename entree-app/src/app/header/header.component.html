@@ -1,5 +1,5 @@
 <header id="header">
-    <div class="container-fluid topbar">
+     <div class="container-fluid topbar">
         <nav class=" container d-flex justify-content-between pt-2 pb-2">
     
           <a class="navbar-brand" href="#">
@@ -7,8 +7,8 @@
           </a>
     
     
-          <div id="searchdiv">
-            <!-- search bar -->
+          <div id="searchdiv" class="d-none d-sm-none d-md-flex">
+           
             <input type="search" name="search" id="searchbar" placeholder="What can we help you Find?" class="" />
           </div>
     
@@ -25,20 +25,31 @@
         </nav>
       </div>
     
-      <nav class="container-fluid" id="menu">
+      <nav class="navbar navbar-expand-md" id="menu">
+        <button class="navbar-toggler toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon custom-toggler"></span>
+        </button>
     
-        <div class="container bottom d-flex align-items-center justify-content-around" >
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav me-auto m-3 m-md-0 mb-lg-0 nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#recommend">RECOMMENDATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#topcat">TOP CATEGORY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#newitems">NEW ITEMS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#itemleft">ITEMS LEFT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#exclusivebrands">EXCLUSIVE BRANDS</a>
+            </li>
+          </ul>
             
-            <a href="#recommend">RECOMMENDATION</a>
-            <a href="#topcat">TOP CATEGORY</a>
-            <a href="#newitems">NEW ITEMS</a>
-            <a href="#itemleft">ITEMS LEFT</a>
-            <a href="#itemleft">EXCLUSIVE BRANDS</a>
-      
-          <!-- <div id="orderdiv" class="">
-            <a href="#" id="neworder">NEW ORDER</a>
-            <a href="#" id="neworder">MY LIST</a>
-          </div> -->
+            
         </div>
       </nav>
 

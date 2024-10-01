@@ -6,14 +6,21 @@ color: red;
 }
 
 .topbar{
-    background-color: white;
+  background-color: white;
 }
+
 #searchdiv{
     display: flex;
     align-items: center;
+    width: 100%;
+    margin: 0px 20px;
+    align-items: center;
+    justify-content: center;
+    
 }
 #searchbar {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   background-color: black;
   border: 1px solid #555;
   border-radius: 20px;
@@ -33,53 +40,29 @@ color: red;
 }
 
 #menu {
-  height: 50px;
   background-color: #3b3b98;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-/* #catlist {
+
+.nav-list{
   display: flex;
-  align-items: center;
-  flex:1;
-  /* border: 1px solid yellow; 
+  flex: 1;
+  margin: 0px auto;
   justify-content: space-around;
-} 
-/* 
-#catlist li {
-  margin-top: 12px;
-  list-style-type: none;
-  /* padding-right: 30px; 
-  padding: 0px;
-  align-items: center;
-  border: 1px solid yellow;
-  margin-left: 0px;
-} */
-
-.bottom a {
-  color: white;
-  text-decoration: none;
+  
 }
-
-/* #neworder {
+.nav-link{
   color: white;
-  background-color: goldenrod;
-  font-weight: bold;
-  border-radius: 20px;
-  padding: 5px 15px;
-  text-decoration: none;
-} */
-
-/* #orderdiv{
-    display: flex;
-    gap: 10px;
-} */
-.bottom{
-    display: flex;
-    /* justify-content: space-between; */
 }
-/* .demo{
-  border: 1px solid red; 
-
-}*/
+.custom-toggler{
+  filter: invert(1);
+}
+.toggler_btn:focus{
+  border: 1px solid white;
+  outline: none;
+  box-shadow: none;
+}
+.toggler_btn{
+  outline: none;
+  border: 1px solid white;
+  margin-left: 10px;
+}
