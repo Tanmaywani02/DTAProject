@@ -1,0 +1,23 @@
+
+<div class="container mt-5" id="exlusiveItems">
+    <h2 class="text">Shop Exclusive Brands</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-4">
+        <div *ngFor="let eb of exbrand" class="card1">
+            <div class="card mt-4">
+                <img src={{eb.image}} class="card-img-top img-fit p-2" alt={{eb.title}}>
+                <div class="card-body">
+                    <span class="badge bg-success ">In Stock</span>
+                    <div class="">
+                        <h5 class="card-title">{{eb.title}}</h5>
+                        <p class="card-text fs-6">${{eb.price}} M.R.P. <del>${{eb.price+100}}</del></p>
+                    </div>
+                    <p class="card-text fs-6 text-justify p_des">{{eb.description}}</p>
+                    <div class="d-flex justify-content-between mt-2">
+                        <a href="" class="btn btn-outline-secondary"><img src="../../assets/bookmark.svg" alt="icon" width="35" height="30" class=""></a>
+                        <button type="button" class="btn btn_add px-4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

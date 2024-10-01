@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
+import { ExclusiveBrandsComponent } from './exclusive-brands/exclusive-brands.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ForgetpassComponent } from './forgetpass/forgetpass.component';
     NewItemsComponent,
     DashboardComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ExclusiveBrandsComponent
   ],
   imports: [
     BrowserModule,
