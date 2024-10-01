@@ -1,0 +1,133 @@
+.div_cart{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.cart {
+    height: fit-content;
+    
+    width: 600px;
+    /* border: 2px solid #3b3b98; */
+    /* position: absolute; */
+    right: 77px;
+    /* margin-top: 8px; */
+    /* z-index: 10; */
+    background-color: white;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    border-radius: 4px;
+  }
+  
+  .btn-close {
+    /* position: absolute; */
+    right: 0%;
+  
+    margin-right: 10px;
+  }
+  .h4_cart {
+    /* background-color: #3b3b98; */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .cart_img {
+    cursor: pointer;
+  }
+  
+  .container_cart {
+  
+    width: 95%;
+    
+  
+  }
+  .tiles_cart {
+  
+    padding: 5px;
+    display: flex;
+    border: 1px solid #3b3b98;
+    margin-bottom: 10px;
+    /* background-color: aquamarine; */
+   
+    align-items: center;
+    align-content: center;
+   
+   
+    
+  }
+  .cartitems {
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0px 10px;
+  
+    
+  
+  }
+  .count_cart {
+    font-size: large;
+  
+  margin: 0;
+    
+  }
+  #remove_cart {
+  
+    font-size: 10px;
+    position: relative;
+   
+   
+  }
+  .btn_parent{
+    display: flex;
+    justify-content: center;
+    position:relative;
+  
+    /* background-color: cyan; */
+
+  }
+  
+  .cart_btn_checkout{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #3b3b98;
+    color: white;
+   
+  }
+.cart_summary{
+    /* color: white; */
+    /* background-color: #6a6aff;   */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 20px;
+
+}
+.summary_content{
+    /* background-color:chartreuse; */
+
+    min-width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+  
+
+.summary_tiles{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    /* background-color: coral; */
+    
+}
+.hr{
+    margin: 0px;
+}
+
+
+.para_del{
+    display: flex;
+    align-items: center;
+    align-content: center;
+   
+   
+    text-align: center;
+}

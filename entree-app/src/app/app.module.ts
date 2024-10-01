@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 import { ExclusiveBrandsComponent } from './exclusive-brands/exclusive-brands.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ExclusiveBrandsComponent } from './exclusive-brands/exclusive-brands.co
     DashboardComponent,
     HomeComponent,
     HeaderComponent,
-    ExclusiveBrandsComponent
+    ExclusiveBrandsComponent,
+    CartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
