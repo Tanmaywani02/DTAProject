@@ -14,6 +14,7 @@
                   id="email"
                   class="form-control form-control"
                   [(ngModel)]="email"
+                  placeholder="Enter Your Email"
                   name="email"
                   required
                 />
@@ -29,8 +30,41 @@
                   type="text"
                   id="password"
                   class="form-control form-control"
-                  [(ngModel)]="security_code"
+                  [(ngModel)]="code"
                   name="security_code"
+                  placeholder="Enter Your Security Code"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div>
+                <label class="form-label fs-6" for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control form-control"
+                  placeholder="Create New Password"
+                  required
+                  minlength="4"
+                  [(ngModel)]="password"
+                  name="password"
+                />
+              </div>
+            </div>
+  
+            <div class="row mb-3">
+              <div>
+                <label class="form-label fs-6" for="cnfpassword"
+                  >Confirm Password</label>
+                <input
+                  type="password"
+                  id="cnfpassword"
+                  class="form-control form-control"
+                  placeholder="Confirm New Password"
+                  [(ngModel)]="psw_repeat"
+                  name="psw_repeat"
                   required
                 />
               </div>
@@ -39,7 +73,7 @@
          
   
             <div class="button  fs-2 mt-4">
-              <button type="submit" class="btn btn-success w-25" (click)="getdata(email,security_code)">Get Password</button>
+              <button type="submit" class="btn btn-success" (click)="resetPassword()">Update Password</button>
             </div>
   
             <div class="row mt-4 ">

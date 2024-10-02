@@ -59,192 +59,34 @@
       "quantity": 23
     }
   ],
-  "logins": [
+  "users": [
     {
-      "id": "1",
-      "email": "user1@example.com",
-      "password": "securePassword1",
-      "security_code": "11111"
+      "id": "1av3",
+      "name": "Tanmay",
+      "email": "tan@abc.com",
+      "code": 1234,
+      "password": "tanmay"
     },
     {
-      "id": "2",
-      "email": "user2@example.com",
-      "password": "securePassword2",
-      "security_code": "22222"
+      "id": "11we",
+      "name": "demo",
+      "email": "demo@abc.com",
+      "code": 1234,
+      "password": "demo"
     },
     {
-      "id": "3",
-      "email": "user3@example.com",
-      "password": "securePassword3",
-      "security_code": "33333"
+      "id": "5a2e",
+      "name": "test",
+      "email": "test@abc.com",
+      "code": "1234",
+      "password": "1111"
     },
     {
-      "id": "4",
-      "email": "user4@example.com",
-      "password": "securePassword4",
-      "security_code": "44444"
-    },
-    {
-      "id": "5",
-      "email": "user5@example.com",
-      "password": "securePassword5",
-      "security_code": "55555"
-    },
-    {
-      "id": "6",
-      "email": "user6@example.com",
-      "password": "securePassword6",
-      "security_code": "66666"
-    },
-    {
-      "id": "7",
-      "email": "user7@example.com",
-      "password": "securePassword7",
-      "security_code": "77777"
-    },
-    {
-      "id": "8",
-      "email": "user8@example.com",
-      "password": "securePassword8",
-      "security_code": "88888"
-    },
-    {
-      "id": "9",
-      "email": "user9@example.com",
-      "password": "securePassword9",
-      "security_code": "99999"
-    },
-    {
-      "id": "10",
-      "email": "user10@example.com",
-      "password": "securePassword10",
-      "security_code": "10101"
-    },
-    {
-      "id": "11",
-      "email": "user11@example.com",
-      "password": "securePassword11",
-      "security_code": "11111"
-    },
-    {
-      "id": "12",
-      "email": "user12@example.com",
-      "password": "securePassword12",
-      "security_code": "12121"
-    },
-    {
-      "id": "13",
-      "email": "user13@example.com",
-      "password": "securePassword13",
-      "security_code": "13131"
-    },
-    {
-      "id": "14",
-      "email": "user14@example.com",
-      "password": "securePassword14",
-      "security_code": "14141"
-    },
-    {
-      "id": "15",
-      "email": "user15@example.com",
-      "password": "securePassword15",
-      "security_code": "15151"
-    },
-    {
-      "id": "16",
-      "email": "user16@example.com",
-      "password": "securePassword16",
-      "security_code": "16161"
-    },
-    {
-      "id": "17",
-      "email": "user17@example.com",
-      "password": "securePassword17",
-      "security_code": "17171"
-    },
-    {
-      "id": "18",
-      "email": "user18@example.com",
-      "password": "securePassword18",
-      "security_code": "18181"
-    },
-    {
-      "id": "19",
-      "email": "user19@example.com",
-      "password": "securePassword19",
-      "security_code": "19191"
-    },
-    {
-      "id": "20",
-      "email": "user20@example.com",
-      "password": "securePassword20",
-      "security_code": "20202"
-    },
-    {
-      "id": "21",
-      "email": "user21@example.com",
-      "password": "securePassword21",
-      "security_code": "21212"
-    },
-    {
-      "id": "22",
-      "email": "user22@example.com",
-      "password": "securePassword22",
-      "security_code": "22222"
-    },
-    {
-      "id": "23",
-      "email": "user23@example.com",
-      "password": "securePassword23",
-      "security_code": "23232"
-    },
-    {
-      "id": "24",
-      "email": "user24@example.com",
-      "password": "securePassword24",
-      "security_code": "24242"
-    },
-    {
-      "id": "25",
-      "email": "user25@example.com",
-      "password": "securePassword25",
-      "security_code": "25252"
-    },
-    {
-      "id": "26",
-      "email": "user26@example.com",
-      "password": "securePassword26",
-      "security_code": "26262"
-    },
-    {
-      "id": "27",
-      "email": "user27@example.com",
-      "password": "securePassword27",
-      "security_code": "27272"
-    },
-    {
-      "id": "28",
-      "email": "user28@example.com",
-      "password": "securePassword28",
-      "security_code": "28282"
-    },
-    {
-      "id": "29",
-      "email": "user29@example.com",
-      "password": "securePassword29",
-      "security_code": "29292"
-    },
-    {
-      "id": "30",
-      "email": "user30@example.com",
-      "password": "securePassword30",
-      "security_code": "30303"
-    },
-    {
-      "id": "11dd",
-      "email": "sss@gmail.com",
-      "password": "1234",
-      "security_code": "1234"
+      "id": "cee5",
+      "name": "test2",
+      "email": "test2@abc.com",
+      "code": "1234",
+      "password": "1234567890"
     }
   ]
 }

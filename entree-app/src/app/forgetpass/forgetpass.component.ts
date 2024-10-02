@@ -9,31 +9,41 @@ import { Router } from '@angular/router';
 })
 export class ForgetpassComponent {
   email:string='';
-  security_code:string='';
+  code:string='';
+  password:string='';
+  psw_repeat:string='';
   users=new Array<Users>();
-  url:string='http://localhost:3000/logins';
+  url:string='http://localhost:3000/users';
 
   constructor(private _http:HttpClient,private _router:Router){
-    this.readdata();
+    this.getusers();
   }
 
-  readdata(){
+  getusers(){
     this._http.get<Users[]>(this.url).subscribe(response=>this.users=response);
-}
-getdata(email:string,security_code:string){
-  var u=this.users.find(x=>x.email===email);
-  
-if(u?.email===email && u.security_code===this.security_code){
-  alert(`Your Password is ${u.password}`);
-  this._router.navigateByUrl("/login");
-}
-else{alert("Invalid Credentials");
-  this._router.navigateByUrl("/signup");
-}
-}
+  }
+  resetPassword(){
+    var u=this.users.find(x=>x.email===this.email);
+    if(u?.email===this.email && u.code===this.code){
+      if(this.password === this.psw_repeat){
+        var newpass = {"id": u.id, "name":u.name,"email":u.email,"code":u.code, "password":this.password};
+        this._http.put(`${this.url}/${u.id}`,newpass)
+        alert("Password Updated");
+        this._router.navigateByUrl("/login");
+      }
+      else{
+        alert("Password does not match!!");
+      }
+    }
+    else{
+      alert("Wrong Security Code");
+      this._router.navigateByUrl("/signup");
+    }
+  }
 }
 class Users{
+  id:string='';
+  name:string='';
   email:string='';
-  security_code:string='';
-  password:string='';
+  code:string='';
 }

@@ -4,7 +4,7 @@
       <div class="loginform">
         <h1>Login</h1>
         <div class="m-5 d-flex justify-content-center   ">
-          <form action="" class=" w-75">
+          <form class=" w-75">
            
             <div class="row mb-3">
               <div>
@@ -15,6 +15,7 @@
                   class="form-control form-control"
                   [(ngModel)]="email"
                   name="email"
+                  placeholder="Enter Your Email"
                   required
                 />
               </div>
@@ -31,6 +32,7 @@
                   class="form-control form-control"
                   [(ngModel)]="password"
                   name="password"
+                  placeholder="Enter Your Password"
                   required
                 />
               </div>
@@ -39,7 +41,7 @@
          
   
             <div class="button  fs-2 mt-4">
-              <button type="submit" class="btn btn-success w-25" (click)="getdata(email,password)">Login</button>
+              <button type="submit" class="btn btn-success w-25" (click)="login()">Login</button>
             </div>
   
             <div class="row mt-4 ">
