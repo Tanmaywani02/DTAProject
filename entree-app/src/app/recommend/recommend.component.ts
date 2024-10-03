@@ -33,6 +33,7 @@ export class RecommendComponent {
     prods.push(id);
     var data={"id":this.temp.id, "products": prods}
     this._http.put(`${this.urlList}/${localStorage.getItem("id")}`,data).subscribe();
+    alert("Item added to Wishlist")
   }
 
   addToCart(id:string){
@@ -43,6 +44,7 @@ export class RecommendComponent {
     console.log(data);
 
     this._http.put(`${this.urlCart}/${localStorage.getItem("id")}`,data).subscribe();
+    alert("Item added to Cart");
   }
 
   
