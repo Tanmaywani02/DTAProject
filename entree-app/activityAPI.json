@@ -23,7 +23,7 @@
   ],
   "recommend": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Classic Margherita Pizza",
       "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
       "description": "Indulge in our classic Margherita pizza, crafted with a thin, crispy crust, topped with fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of premium olive oil.",
@@ -32,7 +32,7 @@
       "quantity": 12
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Vegetarian Stir-Fry",
       "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
       "description": "Savor our vibrant Vegetarian Stir-Fry, featuring a medley of fresh, seasonal vegetables sautéed to perfection in a savory sauce, served over a bed of steamed rice or noodles.",
@@ -41,7 +41,7 @@
       "quantity": 4
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Chicken Alfredo Pasta",
       "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
       "description": "Delight in our creamy Chicken Alfredo Pasta, featuring tender grilled chicken breast tossed with fettuccine in a rich, velvety Alfredo sauce, garnished with freshly grated Parmesan cheese and parsley.",
@@ -50,7 +50,7 @@
       "quantity": 20
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Chicken Biryani",
       "image": "https://cdn.dummyjson.com/recipe-images/11.webp",
       "description": "Experience the rich flavors of our Chicken Biryani, a fragrant basmati rice dish layered with tender, marinated chicken, aromatic spices, and fresh herbs, served with a side of cooling raita.",
@@ -87,6 +87,27 @@
       "email": "test2@abc.com",
       "code": "1234",
       "password": "1234567890"
+    }
+  ],
+  "list": [
+    {
+      "id": "1av3",
+      "products": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "11we",
+      "products": []
+    },
+    {
+      "id": "5a2e",
+      "products": []
+    },
+    {
+      "id": "cee5",
+      "products": []
     }
   ]
 }

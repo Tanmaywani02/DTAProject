@@ -10,10 +10,12 @@
               (click)="closeButton()"
             ></button> -->
       <!-- </div> -->
+       <button (click)="getListDetails()">See Wish List</button>
       <div class="container container_cart">
+        <div *ngFor="let item of wishlistdetails">
         <div class="tiles_cart">
           <img
-            src="../../assets/login.jpg"
+            src={{item.image}}
             width="70px"
             height="80px"
             style="cursor: pointer"
@@ -21,8 +23,8 @@
   
           <div class="cartitems">
             <div>
-              <h5>Orange</h5>
-              <h6>Price : $ 20</h6>
+              <h5>{{item.title}}</h5>
+              <h6>Price : $ {{item.price}}</h6>
             </div>
             
           </div>
@@ -37,84 +39,9 @@
         
         </button>
         </div>
+      </div>
   
-        <div class="tiles_cart">
-          <img
-            src="../../assets/login.jpg"
-            width="70px"
-            height="80px"
-            style="cursor: pointer"
-          />
-  
-          <div class="cartitems">
-            <div>
-              <h5>Orange</h5>
-              <h6>Price : $ 20</h6>
-            </div>
-            
-          </div>
-  
-          <button
-            type="button"
-            class="btn delimg"
-            id="remove_cart"
-            aria-label="Close"
-          >
-          <img src="../../assets/delete.png" width="20px" class="delimg"/>
-        </button>
-        </div>
-  
-        <div class="tiles_cart">
-          <img
-            src="../../assets/login.jpg"
-            width="70px"
-            height="80px"
-            style="cursor: pointer"
-          />
-  
-          <div class="cartitems">
-            <div>
-              <h5>Orange</h5>
-              <h6>Price : $ 20</h6>
-            </div>
-            
-          </div>
-  
-          <button
-            type="button"
-            class="btn delimg"
-            id="remove_cart"
-            aria-label="Close"
-          >
-          <img src="../../assets/delete.png" width="20px" class="delimg"/>
-        </button>
-        </div>
-  
-        <div class="tiles_cart">
-          <img
-            src="../../assets/login.jpg"
-            width="70px"
-            height="80px"
-            style="cursor: pointer"
-          />
-  
-          <div class="cartitems">
-            <div>
-              <h5>Orange</h5>
-              <h6>Price : $ 20</h6>
-            </div>
-           
-          </div>
-  
-          <button
-            type="button"
-            class="btn delimg"
-            id="remove_cart"
-            aria-label="Close"
-          >
-          <img src="../../assets/delete.png" width="20px" class=""/>
-        </button>
-        </div>
+       
   
         
       </div>
