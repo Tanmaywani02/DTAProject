@@ -9,15 +9,22 @@ import { WishlistComponent } from '../wishlist/wishlist.component';
 })
 
 export class HeaderComponent {
+
   constructor(private _router:Router){
 
   }
   isVisible = false;
-
-  openWishlist(){
-    
-    this._router.navigateByUrl('wishlist');
+  login(){
+    if(localStorage.getItem("id")!=undefined){
+      localStorage.clear();
+      this._router.navigateByUrl('');
+      alert("Logout Successful!!")
+    }
+    else{
+      this._router.navigateByUrl('login');
+    }
   }
+ 
   openCart(){
     this._router.navigateByUrl('cart');
   }
