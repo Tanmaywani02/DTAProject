@@ -10,183 +10,57 @@
             (click)="closeButton()"
           ></button> -->
     <!-- </div> -->
+   
     <div class="container container_cart">
-      <div class="tiles_cart">
-        <img
-          src="../../assets/login.jpg"
-          width="70px"
-          height="80px"
-          style="cursor: pointer"
-        />
-
-        <div class="cartitems">
-          <div>
-            <h5>Orange</h5>
-            <h6>Price : $ 20</h6>
-          </div>
-          <div>
-            <p class="count_cart">
-              <span
-                ><img
-                  src="../../assets/minus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="decrease()"
-              /></span>
-              {{ count }}
-              <span
-                ><img
-                  src="../../assets/plus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="increase()"
-              /></span>
-            </p>
-          </div>
-        </div>
-
-        <button
-        type="button"
-        class="btn delimg"
-        id="remove_cart"
-        aria-label="Close"
-      >
-      <img src="../../assets/delete.png" width="20px" class="delimg"/>
-    </button>
-      </div>
-
-      <div class="tiles_cart">
-        <img
-          src="../../assets/login.jpg"
-          width="70px"
-          height="80px"
-          style="cursor: pointer"
-        />
-
-        <div class="cartitems">
-          <div>
-            <h5>Orange</h5>
-            <h6>Price : $ 20</h6>
-          </div>
-          <div>
-            <p class="count_cart">
-              <span
-                ><img
-                  src="../../assets/minus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="decrease()"
-              /></span>
-              {{ count }}
-              <span
-                ><img
-                  src="../../assets/plus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="increase()"
-              /></span>
-            </p>
-          </div>
-        </div>
-
-        <button
-        type="button"
-        class="btn delimg"
-        id="remove_cart"
-        aria-label="Close"
-      >
-      <img src="../../assets/delete.png" width="20px" class="delimg"/>
-    </button>
-      </div>
-
-      <div class="tiles_cart">
-        <img
-          src="../../assets/login.jpg"
-          width="70px"
-          height="80px"
-          style="cursor: pointer"
-        />
-
-        <div class="cartitems">
-          <div>
-            <h5>Orange</h5>
-            <h6>Price : $ 20</h6>
-          </div>
-          <div>
-            <p class="count_cart">
-              <span
-                ><img
-                  src="../../assets/minus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="decrease()"
-              /></span>
-              {{ count }}
-              <span
-                ><img
-                  src="../../assets/plus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="increase()"
-              /></span>
-            </p>
-          </div>
-        </div>
-
-        <button
-        type="button"
-        class="btn delimg"
-        id="remove_cart"
-        aria-label="Close"
-      >
-      <img src="../../assets/delete.png" width="20px" class="delimg"/>
-    </button>
-      </div>
-
-      <div class="tiles_cart">
-        <img
-          src="../../assets/login.jpg"
-          width="70px"
-          height="80px"
-          style="cursor: pointer"
-        />
-
-        <div class="cartitems">
-          <div>
-            <h5>Orange</h5>
-            <h6>Price : $ 20</h6>
-          </div>
-          <div class="para_del">
-            <p class="count_cart">
-              <span
-                ><img
-                  src="../../assets/minus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="decrease()"
-              /></span>
-              {{ count }}
-              <span
-                ><img
-                  src="../../assets/plus.png"
-                  width="25px"
-                  style="cursor: pointer"
-                  (click)="increase()"
-              /></span>
-            </p>
-            <button
-            type="button"
-            class="btn delimg"
-            id="remove_cart"
-            aria-label="Close"
-          >
-          <img src="../../assets/delete.png" width="20px" class="delimg"/>
-        </button>
-          </div>
-        </div>
+      <div *ngFor="let item of cartdetails">
 
       
+      <div class="tiles_cart">
+        <img
+          src={{item.image}}
+          width="70px"
+          height="80px"
+          style="cursor: pointer"
+        />
+
+        <div class="cartitems">
+          <div>
+            <h5>{{item.title}}</h5>
+            <h6>Price : $ {{item.price}}</h6>
+          </div>
+          <div>
+            <p class="count_cart">
+              <span
+                ><img
+                  src="../../assets/minus.png"
+                  width="25px"
+                  style="cursor: pointer"
+                  (click)="decrease()"
+              /></span>
+              {{ count }}
+              <span
+                ><img
+                  src="../../assets/plus.png"
+                  width="25px"
+                  style="cursor: pointer"
+                  (click)="increase()"
+              /></span>
+            </p>
+          </div>
+        </div>
+
+        <button
+        type="button"
+        class="btn delimg"
+        id="remove_cart"
+        aria-label="Close"
+      >
+      <img src="../../assets/delete.png" width="20px" class="delimg"/>
+    </button>
       </div>
+    </div>
+
+      
 
       
     </div>
@@ -223,6 +97,5 @@
             <button class="btn cart_btn_checkout">Checkout</button>
           </div>
     </div>
-    <button (click)="getCartDetails()">Cart</button>
   </div>
 </div>

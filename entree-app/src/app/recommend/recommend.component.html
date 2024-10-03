@@ -13,7 +13,7 @@
                     <p class="card-text fs-6 text-justify p_des">{{rec.description}}</p>
                     <div class="d-flex justify-content-between mt-2">
                         <a class="btn btn-outline-secondary"><img src="../../assets/bookmark.svg" alt="icon" width="35" height="30" class="" (click)="addToList(rec.id)"></a>
-                        <button type="button" class="btn btn_add px-4">Add to Cart</button>
+                        <button type="button" class="btn btn_add px-4" (click)="addToCart(rec.id)">Add to Cart</button>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'signup', component:RegisterComponent},
   {path:'forgetpassword', component:ForgetpassComponent},
-  {path:'cart', component:HomeComponent}
+  {path:'cart', component:CartComponent},
+  {path:'wishlist', component:WishlistComponent}
+
 ];
 
 @NgModule({

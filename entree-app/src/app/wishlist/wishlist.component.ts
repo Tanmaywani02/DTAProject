@@ -14,29 +14,31 @@ export class WishlistComponent {
   wishlistdetails = new Array<WishListDetails>();
   constructor(private _http: HttpClient){
     this.getrecommend();
-    this.getList();
-    // this.getListDetails();
-  }
-  ngOnInit(){
     this.getListDetails();
-
   }
 
+  
+ 
   getrecommend(){
     this._http.get<Recommend[]>(this.url)
       .subscribe(response=>this.recommend=response);
   }
-  getList(){
-    this._http.get<WishList>(`${this.urlList}/${localStorage.getItem("id")}`).subscribe(data=>this.temp=data);
 
+  async sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  getListDetails(){
+  getList(){
+    this._http.get<WishList>(`${this.urlList}/${localStorage.getItem("id")}`).subscribe(data=>this.temp=data);
+  }
+
+  async getListDetails(){
+    this.getList();
+    await this.sleep(50);
     var tempList = this.temp.products;
     for(var i of tempList){
       this._http.get<WishListDetails>(`${this.url}/${i}`).subscribe(data=>this.wishlistdetails.push(data))
     }
-    console.log(this.wishlistdetails)
   }
 
   isVisible = true;

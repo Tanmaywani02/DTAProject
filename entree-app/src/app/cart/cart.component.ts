@@ -14,8 +14,12 @@ export class CartComponent {
   cartdetails = new Array<CartDetails>();
   constructor(private _http: HttpClient){
     this.getrecommend();
-    this.getCart();
+    this.getCartDetails();
     
+  }
+
+  async sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   getrecommend(){
@@ -27,12 +31,13 @@ export class CartComponent {
 
   }
 
-  getCartDetails(){
+  async getCartDetails(){
+    this.getCart();
+    await this.sleep(50);
     var tempList = this.temp.products;
     for(var i of tempList){
-      this._http.get<CartDetails>(`${this.url}/${i}`).subscribe(data=>this.cartdetails.push(data))
+      this._http.get<CartDetails>(`${this.url}/${i.prodid}`).subscribe(data=>this.cartdetails.push(data))
     }
-    console.log(this.cartdetails)
   }
 
   isVisible = true;
