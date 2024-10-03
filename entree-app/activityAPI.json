@@ -109,5 +109,23 @@
       "id": "cee5",
       "products": []
     }
+  ],
+  "cart": [
+    {
+      "id": "1av3",
+      "products": ["abc"]
+    },
+    {
+      "id": "11we",
+      "products": []
+    },
+    {
+      "id": "5a2e",
+      "products": []
+    },
+    {
+      "id": "cee5",
+      "products": []
+    }
   ]
 }

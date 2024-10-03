@@ -30,6 +30,8 @@ export class RecommendComponent {
     this._http.put(`${this.urlList}/${localStorage.getItem("id")}`,data).subscribe();
   }
 
+  
+
 
 }
 

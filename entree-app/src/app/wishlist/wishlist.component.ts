@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-wishlist',
@@ -16,6 +16,10 @@ export class WishlistComponent {
     this.getrecommend();
     this.getList();
     // this.getListDetails();
+  }
+  ngOnInit(){
+    this.getListDetails();
+
   }
 
   getrecommend(){
