@@ -12,7 +12,7 @@ function App() {
         <br/><br/><br/>
         <h1 className='text-center'>ECommerce App </h1>
         <br/><br/><br/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   );
 }
