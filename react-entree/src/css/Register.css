@@ -2,6 +2,7 @@ form {
     background-color: #e4e4fa;
   }
   .container {
+   
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -32,11 +33,12 @@ form {
   }
   .loginimage {
     padding: 0px 30px;
+    
   }
   .loginimage img {
     border-radius: 30px;
     padding: 20px;
-    height: 500px;
+    height: 600px;
     width: 100%;
    
   }
@@ -55,7 +57,6 @@ form {
     box-shadow: none;
     border-color: black;
   }
-  
   .button {
     display: flex;
     justify-content: center;
