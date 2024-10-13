@@ -1,5 +1,8 @@
-// import logo from './logo.svg';
-import './App.css';
+// import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Cart from "./components/Cart";
+import Dashboard from "./components/Dashboard";
+import Checkout from "./components/Checkout";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login.jsx'
@@ -157,6 +160,11 @@ function App() {
         
         {/* <br/><br/><br/> */}
         <Footer/>
+        {/* <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout/>} />
+      </Routes> */}
     </div>
 
   );
