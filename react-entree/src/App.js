@@ -98,8 +98,8 @@ function App() {
     }
   }
 
-  // const handleATC=(idx)=>{
-  //   localStorage.setItem("id","1av3");
+  const handleATC=(idx)=>{
+    localStorage.setItem("id","1av3");
   //   if(localStorage.getItem("id") !== undefined){
   //     var ucart = {}
   //     fetch(`${cartUrl}/${localStorage.getItem("id")}`)
@@ -113,11 +113,11 @@ function App() {
   //       body: newCart
   //     }).then(resp=>resp.json()).then(data1=>console.log(data1))
         
-  //   }
-  //   else{
-  //     // routing to login page here
-  //   }
-  // }
+    // }
+    // else{
+    //   // routing to login page here
+    // }
+  }
 
 
   return (
