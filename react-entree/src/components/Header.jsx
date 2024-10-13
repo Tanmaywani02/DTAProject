@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
-import logo from './images/logo.png';
-import loginIcon from './images/log-in.svg';
-import bookmarkIcon from './images/bookmark.svg';
-import cartIcon from './images/shopping-cart.svg';
+import logo from '../images/logo.png';
+import loginIcon from '../images/log-in.svg';
+import bookmarkIcon from '../images/bookmark.svg';
+import cartIcon from '../images/shopping-cart.svg';
 import '../css/Header.css';
 
 const HeaderComponent = () => {
   //const navigate = useNavigate();
-  const [isVisible, setIsVisible] = useState(false);
-  const [count, setCount] = useState(0);
 
   const login = () => {
     if (localStorage.getItem("id") !== undefined) {
@@ -21,25 +19,6 @@ const HeaderComponent = () => {
     }
   };
 
-  const openCart = () => {
-    //navigate('/cart');
-  };
-
-  const openButton = () => {
-    setIsVisible(true);
-  };
-
-  const closeButton = () => {
-    setIsVisible(false);
-  };
-
-  const increase = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
-  const decrease = () => {
-    setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
-  };
 
   return (
     <header id="header">
@@ -65,7 +44,7 @@ const HeaderComponent = () => {
               <img src={bookmarkIcon} alt="icon" width="40" height="20" />
             </a>
 
-            <a href="/#" onClick={openCart}>
+            <a href="/#" >
               <img src={cartIcon} alt="icon" width="40" height="20" />
             </a>
             
