@@ -1,8 +1,8 @@
 
-.allproducts{
+#allproducts{
     /* background-color: red; */
     /* padding-top: 0px; */
-    /* display: flex; */
+    display: flex;
     margin-top: 0;
     justify-content: start;
     box-shadow: none;

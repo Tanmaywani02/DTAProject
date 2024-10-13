@@ -42,7 +42,6 @@ export class RecommendComponent {
     prods.push({"prodid":id, "quant":1});
     var data={"id":this.cart.id, "products": prods};
     console.log(data);
-
     this._http.put(`${this.urlCart}/${localStorage.getItem("id")}`,data).subscribe();
     alert("Item added to Cart");
   }

@@ -7,75 +7,76 @@ import '../css/Header.css';
 import userIcon from '../images/user-icon.svg';
 
 export function Header(){
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState(null);
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
 
-    const users =[
-        { id: 1001, username: 'user1@gmail.com', password: '123' },
-        { id: 1002, username: 'user2@gmail.com', password: '234' },
-        { id: 1003, username: 'user3@gmail.com', password: '345' },
-        { id: 1004, username: 'user4@gmail.com', password: '456' },
-        { id: 1005, username: 'user5@gmail.com', password: '567' }
-    ]
+    // const users =[
+    //     { id: 1001, username: 'user1@gmail.com', password: '123' },
+    //     { id: 1002, username: 'user2@gmail.com', password: '234' },
+    //     { id: 1003, username: 'user3@gmail.com', password: '345' },
+    //     { id: 1004, username: 'user4@gmail.com', password: '456' },
+    //     { id: 1005, username: 'user5@gmail.com', password: '567' }
+    // ]
 
-    const errors = {
-        uname: "Invalid username",
-        pass: "Invalid password"
-      };
+    // const errors = {
+    //     uname: "Invalid username",
+    //     pass: "Invalid password"
+    //   };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
     
-        var { uname, pass } = document.forms[0];
-        const userData = users.find((user) => user.username === uname.value);
-        if (userData) {
-            if (userData.password !== pass.value) {
-                setErrorMessages({ name: "pass", message: errors.pass });
-            } else {
-                setIsSubmitted(true);
-                setIsLoggedIn(true);
-                setUser(userData);
-                setShowLoginForm(false);
-            }
-            } else {
-              setErrorMessages({ name: "uname", message: errors.uname });
-            }
-          };
+    //     var { uname, pass } = document.forms[0];
+    //     const userData = users.find((user) => user.username === uname.value);
+    //     if (userData) {
+    //         if (userData.password !== pass.value) {
+    //             setErrorMessages({ name: "pass", message: errors.pass });
+    //         } else {
+    //             setIsSubmitted(true);
+    //             setIsLoggedIn(true);
+    //             setUser(userData);
+    //             setShowLoginForm(false);
+    //         }
+    //         } else {
+    //           setErrorMessages({ name: "uname", message: errors.uname });
+    //         }
+    //       };
         
-          const handleLogout = () => {
-            setIsLoggedIn(false);
-            setUser(null);
-            setIsSubmitted(false);
-          };
+    //       const handleLogout = () => {
+    //         setIsLoggedIn(false);
+    //         setUser(null);
+    //         setIsSubmitted(false);
+    //       };
 
-          const renderErrorMessage = (name) =>
-            name === errorMessages.name && (
-              <div className="error">{errorMessages.message}</div>
-            );
+    //       const renderErrorMessage = (name) =>
+    //         name === errorMessages.name && (
+    //           <div className="error">{errorMessages.message}</div>
+    //         );
 
-            const renderForm = (
-                <div>
-                  <form onSubmit={handleSubmit}>
-                    <div className="input-container mb-3">
-                      <label className='form-label text-primary'>Username </label><br/>
-                      <input type="text" name="uname" className="form-control" required />
-                      {renderErrorMessage("uname")}
-                    </div>
-                    <div className="input-container">
-                      <label className='form-label text-primary'>Password </label>
-                      <input type="password" name="pass" className="form-control" required /><br/>
-                      <br/>
-                      {renderErrorMessage("pass")}
-                    </div>
-                    <div className="button-container text-center">
-                      <button className="btn btn-primary" type="submit" >Submit</button>
-                    </div>
-                  </form>
-                </div>
-              );
+    //         const renderForm = (
+    //             <div>
+    //               <form onSubmit={handleSubmit}>
+    //                 <div className="input-container mb-3">
+    //                   <label className='form-label text-primary'>Username </label><br/>
+    //                   <input type="text" name="uname" className="form-control" required />
+    //                   {renderErrorMessage("uname")}
+    //                 </div>
+    //                 <div className="input-container">
+    //                   <label className='form-label text-primary'>Password </label>
+    //                   <input type="password" name="pass" className="form-control" required /><br/>
+    //                   <br/>
+    //                   {renderErrorMessage("pass")}
+    //                 </div>
+    //                 <div className="button-container text-center">
+    //                   <button className="btn btn-primary" type="submit" >Submit</button>
+    //                 </div>
+    //               </form>
+    //             </div>
+    //           );
 
     return (
         <div>
@@ -101,7 +102,7 @@ export function Header(){
 
                         <ul className='dropdown-menu'>
                             <li><button className="dropdown-item">My Profile</button></li>
-                            <li><button className="dropdown-item" onClick={handleLogout}>Logout</button></li> 
+                            <li><button className="dropdown-item" >Logout</button></li> 
                         </ul>
                     </div>
                  ) : (
@@ -118,7 +119,7 @@ export function Header(){
                 </div>
               </nav>
                 
-                {isLoggedIn? alert("User is successfully logged in"):<div></div>}
+                {/* {isLoggedIn? alert("User is successfully logged in"):<div></div>} */}
             </div>
             {/* <nav className="navbar navbar-expand-md" id="menu">
               <button className="navbar-toggler toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle Navigation">
@@ -144,12 +145,11 @@ export function Header(){
                 </ul>
               </div>
             </nav> */}
-            <br/><br/>
-            {showLoginForm && !isLoggedIn && (
+            {/* {showLoginForm && !isLoggedIn && (
                     <div className="login-form">
                     {renderForm}
                     </div>
-                )}
+                )} */}
           </header>
         </div>
     )

@@ -3,7 +3,7 @@ import '../css/Filter.css'
 
 function Filter({onSelectCat}) {
   return (
-    <div className='container filterdiv'>
+    <div className='container filterdiv' id='filterdiv'>
         <div className='title'>
          <h2>Products</h2>
         </div>

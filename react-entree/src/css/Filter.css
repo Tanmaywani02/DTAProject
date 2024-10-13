@@ -1,9 +1,17 @@
-.filterdiv{
+#filterdiv{
+    /* background-color: red; */
     display: flex;
     width: 100%;
     justify-content: space-between;
+    /* height: 300px; */
     margin-bottom: 0;
+    gap: 5px;
 }
+.title{
+    /* border: 1px solid black; */
+
+}
+
 h2{
     color: #3b3b98;
 }
@@ -12,12 +20,14 @@ h6{
 }
 
 .filter{
-    height: 100%;
+    /* height: 100%; */
     width: 200px;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid black; */
+
 }
 .filter select{
     /* color: #3b3b98; */

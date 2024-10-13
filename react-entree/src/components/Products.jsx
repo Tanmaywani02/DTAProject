@@ -6,7 +6,7 @@ import Filter from './Filter'
 function Products({products}) {
   return (
     <div>
-        <div class="container allproducts" id="recommend">
+        <div class="container" id="allproducts">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-4">
         {/* <h2 class="text">Products</h2> */}
         
@@ -19,7 +19,7 @@ function Products({products}) {
                                     <span class="badge bg-success ">In Stock</span>
                                     <div class="">
                                         <h5 class="card-title">{product.title}</h5>
-                                        <p class="card-text fs-6">${product.price} M.R.P. <del>${product.price+100}</del></p>
+                                        <p class="card-text fs-6">₹{product.price} M.R.P. <del>₹{product.price+100}</del></p>
                                     </div>
                                     <p class="card-text fs-6 text-justify p_des">{product.description}</p>
                                     <div class="d-flex justify-content-between mt-2">

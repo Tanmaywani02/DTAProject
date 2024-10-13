@@ -1,6 +1,6 @@
 
 #header{
-    position: fixed;
+    position: sticky;
     top: 0px;
     z-index: 9;
     color: red;
@@ -10,6 +10,7 @@
     .topbar {
       background-color: white;
     }
+    
     #topbarnav{
       margin-top: 0px;
     }

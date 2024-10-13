@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Login from './components/Login.jsx'
 import Register from './components/Register.jsx';
 import { useEffect, useState } from 'react';
@@ -100,12 +100,12 @@ function App() {
         <Header isLogin={isLogin}/>
         {/* <br/><br/><br/> */}
         {/* <h1 className='text-center'>ECommerce App </h1> */}
-        {/* <Carousel/> */}
-        {/* <Filter onSelectCat={handleSetCat}/> */}
-        {/* <Products products={filterProducts.length==0?products:filterProducts}/> */}
+        <Carousel/>
+        <Filter onSelectCat={handleSetCat}/>
+        <Products products={filterProducts.length==0?products:filterProducts}/>
         {/* <Login onSubmitClick={handleLoginUser}/> */}
         {/* <Register onSubmitClick={handleRegisterUser}/> */}
-        <ForgetPassword onForgetPassword={handleForgetPassword}/>
+        {/* <ForgetPassword onForgetPassword={handleForgetPassword}/> */}
         
         {/* <br/><br/><br/> */}
         <Footer/>
