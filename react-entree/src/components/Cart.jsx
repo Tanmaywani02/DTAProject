@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { MdDelete } from "react-icons/md";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa6";
+// import { useNavigate } from "react-router-dom";
+// import { MdDelete } from "react-icons/md";
+// import { FaPlus } from "react-icons/fa6";
+// import { FaMinus } from "react-icons/fa6";
 const Cart = () => {
   const [api_product, setApi_product] = useState([]);
   const [api_cart, setApi_cart] = useState([]);
   const [quantity,setQuantity] = useState(1)
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:3000/products")
@@ -51,11 +51,11 @@ const Cart = () => {
               </td>
               <td>$ {e.price}</td>
 
-              <td className="text-center"><FaMinus className="mx-1" /> {quantity} <FaPlus className="mx-1" /></td>
+              {/* <td className="text-center"><FaMinus className="mx-1" /> {quantity} <FaPlus className="mx-1" /></td> */}
 
 
               <td>{e.price * e.quantity}</td>
-              <td className="text-center fs-4 text-danger "><MdDelete /></td>
+              {/* <td className="text-center fs-4 text-danger "><MdDelete /></td> */}
             </tr>
           ))}
         </tbody>
@@ -86,7 +86,7 @@ const Cart = () => {
           <p><b> $ 000</b></p>
         </div>
         <button className="btn w-100 bg-info" onClick={() => {
-        navigate("/checkout");
+        // navigate("/checkout");
         }}>CHECKOUT ORDER</button>
       </div>
       </div>
