@@ -29,7 +29,8 @@
       "description": "Indulge in our classic Margherita pizza, crafted with a thin, crispy crust, topped with fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of premium olive oil.",
       "price": 123,
       "isavailable": true,
-      "quantity": 12
+      "quantity": 12,
+      "category":"Pizza"
     },
     {
       "id": "2",
@@ -38,7 +39,8 @@
       "description": "Savor our vibrant Vegetarian Stir-Fry, featuring a medley of fresh, seasonal vegetables sautéed to perfection in a savory sauce, served over a bed of steamed rice or noodles.",
       "price": 130,
       "isavailable": true,
-      "quantity": 4
+      "quantity": 4,
+      "category":""
     },
     {
       "id": "3",
@@ -47,7 +49,8 @@
       "description": "Delight in our creamy Chicken Alfredo Pasta, featuring tender grilled chicken breast tossed with fettuccine in a rich, velvety Alfredo sauce, garnished with freshly grated Parmesan cheese and parsley.",
       "price": 200,
       "isavailable": true,
-      "quantity": 20
+      "quantity": 20,
+      "category":"Pasta"
     },
     {
       "id": "4",
@@ -56,7 +59,48 @@
       "description": "Experience the rich flavors of our Chicken Biryani, a fragrant basmati rice dish layered with tender, marinated chicken, aromatic spices, and fresh herbs, served with a side of cooling raita.",
       "price": 350,
       "isavailable": true,
-      "quantity": 23
+      "quantity": 23,
+      "category":"Biryani"
+    },
+    {
+      "id": "5",
+      "title": "Classic Margherita Pizza",
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "description": "Indulge in our classic Margherita pizza, crafted with a thin, crispy crust, topped with fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of premium olive oil.",
+      "price": 123,
+      "isavailable": true,
+      "quantity": 12,
+      "category":"Pizza"
+    },
+    {
+      "id": "6",
+      "title": "Vegetarian Stir-Fry",
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "description": "Savor our vibrant Vegetarian Stir-Fry, featuring a medley of fresh, seasonal vegetables sautéed to perfection in a savory sauce, served over a bed of steamed rice or noodles.",
+      "price": 130,
+      "isavailable": true,
+      "quantity": 4,
+      "category":""
+    },
+    {
+      "id": "7",
+      "title": "Chicken Alfredo Pasta",
+      "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+      "description": "Delight in our creamy Chicken Alfredo Pasta, featuring tender grilled chicken breast tossed with fettuccine in a rich, velvety Alfredo sauce, garnished with freshly grated Parmesan cheese and parsley.",
+      "price": 200,
+      "isavailable": true,
+      "quantity": 20,
+      "category":"Pasta"
+    },
+    {
+      "id": "8",
+      "title": "Chicken Biryani",
+      "image": "https://cdn.dummyjson.com/recipe-images/11.webp",
+      "description": "Experience the rich flavors of our Chicken Biryani, a fragrant basmati rice dish layered with tender, marinated chicken, aromatic spices, and fresh herbs, served with a side of cooling raita.",
+      "price": 350,
+      "isavailable": true,
+      "quantity": 23,
+      "category":"Biryani"
     }
   ],
   "users": [

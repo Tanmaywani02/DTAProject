@@ -22,6 +22,7 @@ const HeaderComponent = ({isLogin}) => {
 
 
   return (
+    
     <header id="header">
       <div className="container-fluid topbar">
         <nav className="container d-flex justify-content-between pt-2 pb-2">
@@ -77,6 +78,7 @@ const HeaderComponent = ({isLogin}) => {
         </div>
       </nav>
     </header>
+   
   );
 };
 
