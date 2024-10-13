@@ -45,7 +45,7 @@ function App() {
   }
   return (
     <div className="content">
-        {/* <Header/> */}
+        <Header/>
         {/* <br/><br/><br/> */}
         {/* <h1 className='text-center'>ECommerce App </h1> */}
 
@@ -53,7 +53,7 @@ function App() {
         {/* <Register onSubmitClick={handleRegisterUser}/> */}
         
         {/* <br/><br/><br/> */}
-        {/* <Footer/> */}
+        <Footer/>
     </div>
   );
 }
