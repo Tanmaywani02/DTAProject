@@ -1,0 +1,26 @@
+.filterdiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+h2{
+    color: #3b3b98;
+}
+h6{
+    color: #3b3b98;
+}
+
+.filter{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.filter select{
+    /* color: #3b3b98; */
+    height: 30px;
+    width: 100px;
+}

@@ -82,7 +82,7 @@ export function Header(){
           <header id="header">
           
             <div className="container-fluid topbar">
-              <nav className="container d-flex justify-content-between pt-2 pb-2">
+              <nav className="container d-flex justify-content-between pt-2 pb-2"  id='topbarnav'>
                 
                 <a className="navbar-brand" href="/#">
                   <img src={logo} alt="Logo" width="150" height="50" />
@@ -120,7 +120,7 @@ export function Header(){
                 
                 {isLoggedIn? alert("User is successfully logged in"):<div></div>}
             </div>
-            <nav className="navbar navbar-expand-md" id="menu">
+            {/* <nav className="navbar navbar-expand-md" id="menu">
               <button className="navbar-toggler toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle Navigation">
                 <span className="navbar-toggler-icon custom-toggler"></span>
               </button>
@@ -143,7 +143,7 @@ export function Header(){
                   </li>
                 </ul>
               </div>
-            </nav>
+            </nav> */}
             <br/><br/>
             {showLoginForm && !isLoggedIn && (
                     <div className="login-form">

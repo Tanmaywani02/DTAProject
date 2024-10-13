@@ -29,16 +29,18 @@
       "description": "Indulge in our classic Margherita pizza, crafted with a thin, crispy crust, topped with fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of premium olive oil.",
       "price": 123,
       "isavailable": true,
-      "quantity": 12
+      "quantity": 12,
+      "category":"Pizza"
     },
     {
       "id": "2",
-      "title": "Vegetarian Stir-Fry",
-      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
-      "description": "Savor our vibrant Vegetarian Stir-Fry, featuring a medley of fresh, seasonal vegetables sautéed to perfection in a savory sauce, served over a bed of steamed rice or noodles.",
+      "title": "Russian Borscht",
+      "image": "https://cdn.dummyjson.com/recipe-images/27.webp",
+      "description": "Enjoy our Russian Borscht, a hearty beet soup with cabbage, potatoes, carrots, and onions, finished with a touch of vinegar. Served with sour cream and fresh dill, it's a comforting and vibrant dish.",
       "price": 130,
       "isavailable": true,
-      "quantity": 4
+      "quantity": 4,
+      "category":"Soup"
     },
     {
       "id": "3",
@@ -47,7 +49,8 @@
       "description": "Delight in our creamy Chicken Alfredo Pasta, featuring tender grilled chicken breast tossed with fettuccine in a rich, velvety Alfredo sauce, garnished with freshly grated Parmesan cheese and parsley.",
       "price": 200,
       "isavailable": true,
-      "quantity": 20
+      "quantity": 20,
+      "category":"Pasta"
     },
     {
       "id": "4",
@@ -56,8 +59,131 @@
       "description": "Experience the rich flavors of our Chicken Biryani, a fragrant basmati rice dish layered with tender, marinated chicken, aromatic spices, and fresh herbs, served with a side of cooling raita.",
       "price": 350,
       "isavailable": true,
-      "quantity": 23
+      "quantity": 23,
+      "category":"Chicken"
+    },
+    {
+      "id":"5",
+      "title": "Mango Salsa Chicken",
+      "image":"https://cdn.dummyjson.com/recipe-images/5.webp",
+      "description":"Enjoy our zesty Mango Salsa Chicken, featuring juicy grilled chicken breast topped with a vibrant, tangy mango salsa, served with a side of seasoned rice and fresh vegetables.",
+      "price":0,
+      "isavailable":true,
+      "quantity":20,
+      "category":"Chicken"
+    },
+    {
+      "id":"6",
+      "title": "Quinoa Salad with Avocado",
+      "image":"https://cdn.dummyjson.com/recipe-images/6.webp",
+      "description":"Relish our refreshing Quinoa Salad with Avocado, a nutritious blend of fluffy quinoa, ripe avocado, cherry tomatoes, cucumbers, and mixed greens, all tossed in a light, zesty vinaigrette.",
+      "price":900,
+      "isavailable":true,
+      "quantity":111,
+      "category":"Salad"
+    },
+    {
+      "id":"7",
+      "title": "Tomato Basil Bruschetta",
+      "image":"https://cdn.dummyjson.com/recipe-images/7.webp",
+      "description":"Savor our classic Tomato Basil Bruschetta, featuring toasted baguette slices topped with a fresh mixture of diced tomatoes, fragrant basil, garlic, and a drizzle of balsamic glaze.",
+      "price":450,
+      "isavailable":true,
+      "quantity":123,
+      "category":"Appetizer"
+    },
+    {
+      "id":"8",
+      "title": "Caprese Salad",
+      "image":"https://cdn.dummyjson.com/recipe-images/9.webp",
+      "description":"Indulge in our Caprese Salad, a delightful combination of ripe tomatoes, fresh mozzarella, and fragrant basil leaves, drizzled with extra virgin olive oil and a touch of balsamic reduction.",
+      "price":150,
+      "isavailable":true,
+      "quantity":98,
+      "category":"Salad"
+    },
+    {
+      "id":"9",
+      "title": "Shrimp Scampi Pasta",
+      "image":"https://cdn.dummyjson.com/recipe-images/10.webp",
+      "description":"Treat yourself to our Shrimp Scampi Pasta, featuring succulent shrimp sautéed in a garlic butter and white wine sauce, tossed with al dente pasta and garnished with fresh parsley and a hint of lemon zest.",
+      "price":370,
+      "isavailable":true,
+      "quantity":56,
+      "category":"Pasta"
+    },
+    {
+      "id":"10",
+      "title": "Aloo Keema",
+      "image": "https://cdn.dummyjson.com/recipe-images/13.webp",
+      "description":"Delight in our Aloo Keema, a flavorful dish of minced meat cooked with tender potatoes, aromatic spices, and fresh herbs, served with warm naan or steamed rice for a hearty and satisfying meal.",
+      "price":160,
+      "isavailable":true,
+      "quantity":34,
+      "category":""
+    },
+    {
+      "id":"11",
+      "title": "Saag (Spinach) with Makki di Roti",
+      "image":"https://cdn.dummyjson.com/recipe-images/15.webp",
+      "description":"Experience the traditional taste of Saag (Spinach) with Makki di Roti, a comforting dish featuring creamy, slow-cooked spinach seasoned with a blend of spices, served alongside warm, golden cornmeal flatbreads.",
+      "price":390,
+      "isavailable":true,
+      "quantity":15,
+      "category":""
+    },
+    {
+      "id":"12",
+      "title": "Japanese Ramen Soup",
+      "image":"https://cdn.dummyjson.com/recipe-images/16.webp",
+      "description":"Enjoy our authentic Japanese Ramen Soup, a savory and comforting bowl of rich, flavorful broth, tender noodles, and an assortment of toppings such as sliced pork, soft-boiled eggs, nori, and fresh vegetables, garnished with green onions and a dash of sesame seeds.",
+      "price":300,
+      "isavailable":true,
+      "quantity":15,
+      "category":"Soup"
+    },
+    {
+      "id":"13",
+      "title": "Butter Chicken",
+      "image":"https://cdn.dummyjson.com/recipe-images/20.webp",
+      "description":"Savor the rich and creamy flavors of our Butter Chicken, a classic Indian dish featuring tender pieces of chicken simmered in a velvety tomato-based sauce, infused with aromatic spices and finished with a touch of butter and cream. Enjoy it with warm naan or fragrant basmati rice for a truly indulgent meal.",
+      "price":450,
+      "isavailable":true,
+      "quantity":11,
+      "category":"Chicken"
+    },
+    {
+      "id":"14",
+      "title": "Italian Tiramisu",
+      "image":"https://cdn.dummyjson.com/recipe-images/23.webp",
+      "description":"Indulge in our classic Italian Tiramisu, a luscious dessert made with layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and a dusting of rich cocoa powder. This delightful treat is the perfect balance of sweetness and coffee flavor, making it an elegant and satisfying end to any meal.",
+      "price":300,
+      "isavailable":true,
+      "quantity":12,
+      "category":"Dessert"
+    },
+    {
+      "id":"15",
+      "title": "Mango Lassi",
+      "image":"https://cdn.dummyjson.com/recipe-images/22.webp",
+      "description":"Refresh yourself with our Mango Lassi, a delightful and creamy Indian beverage made from ripe mangoes, smooth yogurt, a touch of sugar, and a hint of cardamom. This chilled drink is perfect for quenching your thirst and adding a sweet, tropical twist to your day.",
+      "price":120,
+      "isavailable":true,
+      "quantity":12,
+      "category":"Dessert"
+    },
+    {
+      "id":"16",
+      "title": "Lebanese Falafel Wrap",
+      "image":"https://cdn.dummyjson.com/recipe-images/29.webp",
+      "description":"Treat yourself to our Lebanese Falafel Wrap, a delicious and wholesome meal featuring crispy, golden-brown falafel made from ground chickpeas and fresh herbs, wrapped in warm pita bread. This wrap is complemented with a medley of fresh vegetables, tangy pickles, and a drizzle of creamy tahini sauce, offering a perfect balance of flavors and textures in every bite.",
+      "price":240,
+      "isavailable":true,
+      "quantity":12,
+      "category":"Appetizer"
     }
+
+
   ],
   "users": [
     {
