@@ -3,7 +3,7 @@ import '../css/Products.css'
 import bookmark from '../images/bookmark.svg'
 import Filter from './Filter'
 
-function Products({products}) {
+function Products({products, onATC}) {
   return (
     <div>
         <div class="container" id="allproducts">
@@ -26,7 +26,7 @@ function Products({products}) {
                                         <a class="btn btn-outline-secondary">
                                             <img src={bookmark} alt="icon" width="35" height="30" class=""/>
                                         </a>
-                                        <button type="button" class="btn btn_add px-4" >Add to Cart</button>
+                                        <button type="button" class="btn btn_add px-4" onClick={(e)=>onATC(product.id)}>Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
