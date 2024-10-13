@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-//import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
 import loginIcon from '../images/log-in.svg';
 import bookmarkIcon from '../images/bookmark.svg';
 import cartIcon from '../images/shopping-cart.svg';
 import '../css/Header.css';
 
-const HeaderComponent = () => {
+
+const HeaderComponent = ({isLogin}) => {
   //const navigate = useNavigate();
 
   const login = () => {
-    if (localStorage.getItem("id") !== undefined) {
-      localStorage.clear();
-      //navigate('/');
-      alert("Logout Successful!!");
-    } else {
-      //navigate('/login');
-    }
+    // if (localStorage.getItem("id") !== undefined) {
+    //   localStorage.clear();
+    //   //navigate('/');
+    //   alert("Logout Successful!!");
+    // } else {
+    //   //navigate('/login');
+    // }
+    console.log(isLogin)
   };
 
 
