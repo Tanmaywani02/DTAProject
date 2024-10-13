@@ -33,7 +33,7 @@ function ForgetPassword({onForgetPassword}) {
       <div class="forgetform">
         <h1>Reset Password</h1>
         <div class="m-5 d-flex justify-content-center   ">
-          <form class=" w-75">
+          <form class="w-75" onSubmit={handleSubmit}>
             {inputFields.map((input,index)=>{
               return(
                 <div>
@@ -60,7 +60,7 @@ function ForgetPassword({onForgetPassword}) {
                   type="text"
                   id="password"
                   class="form-control form-control"
-                  name="security_code"
+                  name="code"
                   placeholder="What was the name of your favorite childhood pet?"
                   value={input.code}
                   onChange={e=>handleChange(index,e)}

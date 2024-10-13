@@ -24,7 +24,6 @@ function App() {
       .then(data=>setProducts(data))
   },[products])
   const [isLogin, setIsLogin] = useState(false)
-  const [newCart, setnewCart] = useState({})
   const handleRegisterUser=(user)=>{
     console.log("creating user")
     console.log(user)
@@ -66,13 +65,16 @@ function App() {
     fetch(usersUrl)
       .then(res=>res.json())
       .then(data=>{
+        console.log("inside")
         var temp = data.find(x=>x.email==inp.email)
         if(temp!= undefined){
+          console.log(temp)
           if(temp.email==inp.email && temp.code == inp.code){
             var temprecord = {id:temp.id, name:temp.name, email:temp.email, code:temp.code, password:inp.password}
+            console.log(temprecord)
             fetch(`${usersUrl}/${temp.id}`,{
               method:"PUT",
-              body:temprecord
+              body:JSON.stringify(temprecord)
             }).then(res=>res.json())
               .then(data=>console.log(data)//Password updated successfully
               )
@@ -100,23 +102,22 @@ function App() {
 
   const handleATC=(idx)=>{
     localStorage.setItem("id","1av3");
-  //   if(localStorage.getItem("id") !== undefined){
-  //     var ucart = {}
-  //     fetch(`${cartUrl}/${localStorage.getItem("id")}`)
-  //       .then(res=>res.json())
-  //       .then(data=>setnewCart(data)) 
-        
-  //     newCart.products.push({prodid:idx, quant:1});
-  //     setnewCart({"id":localStorage.getItem("id"), "products":newCart.products})
-  //     fetch(`${cartUrl}/${localStorage.getItem("id")}`,{
-  //       method:"PUT",
-  //       body: newCart
-  //     }).then(resp=>resp.json()).then(data1=>console.log(data1))
-        
-    // }
-    // else{
-    //   // routing to login page here
-    // }
+    if(localStorage.getItem("id") !== undefined){
+      fetch(`${cartUrl}/${localStorage.getItem("id")}`)
+        .then(res=>res.json())
+        .then(data=> 
+      {
+      data.products.push({prodid:idx, quant:1})
+      var newcart = {"id":localStorage.getItem("id"), "products":data.products}
+      fetch(`${cartUrl}/${localStorage.getItem("id")}`,{
+        method:"PUT",
+        body: JSON.stringify(newcart)
+      }).then(resp=>resp.json()).then(data1=>console.log(data1))
+    })
+    }
+    else{
+      // routing to login page here
+    }
   }
 
 
