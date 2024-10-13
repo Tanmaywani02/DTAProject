@@ -1,12 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
+//import Footer from './components/Footer';
 import Login from './components/Login.jsx'
 import Register from './components/Register.jsx';
 import { useState } from 'react';
 import Carousel from './components/Carousel.jsx';
-
+//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import { LoginPage } from './components/Header1';
 function App() {
   const usersUrl = "http://localhost:3000/users"
   const [isLogin, setIsLogin] = useState(false)
@@ -58,6 +59,7 @@ function App() {
         {/* <br/><br/><br/> */}
         <Footer/>
     </div>
+
   );
 }
 

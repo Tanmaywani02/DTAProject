@@ -1,9 +1,10 @@
 
 #header{
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 9;
     color: red;
+    width:100%;
     }
     
     .topbar {
