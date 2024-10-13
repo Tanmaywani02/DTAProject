@@ -12,9 +12,12 @@ function Filter({onSelectCat}) {
             <select id='category' name='category' onChange={(e)=>onSelectCat()}>
                 <option value="all">All</option>
                 <option value="Pizza">Pizza</option>
-                <option value="Burger">Burger</option>
-                <option value="Biryani">Biryani</option>
                 <option value="Pasta">Pasta</option>
+                <option value="Appetizer">Appetizer</option>
+                <option value="Salad">Salad</option>
+                <option value="Soup">Soup</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Dessert">Dessert</option>
             </select>
         </div>
     </div>

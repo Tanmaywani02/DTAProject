@@ -9,6 +9,9 @@
     .topbar {
       background-color: white;
     }
+    #topbarnav{
+      margin-top: 0px;
+    }
     
     #searchdiv{
         display: flex;

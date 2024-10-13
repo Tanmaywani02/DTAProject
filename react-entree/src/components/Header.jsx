@@ -22,10 +22,9 @@ const HeaderComponent = ({isLogin}) => {
 
 
   return (
-    
     <header id="header">
       <div className="container-fluid topbar">
-        <nav className="container d-flex justify-content-between pt-2 pb-2">
+        <nav className="container d-flex justify-content-between pt-2 pb-2" id='topbarnav'>
           
           <a className="navbar-brand" href="/#">
             <img src={logo} alt="Logo" width="150" height="50" />
@@ -53,7 +52,7 @@ const HeaderComponent = ({isLogin}) => {
           </div>
         </nav>
       </div>
-      <nav className="navbar navbar-expand-md" id="menu">
+      {/* <nav className="navbar navbar-expand-md" id="menu">
         <button className="navbar-toggler toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle Navigation">
           <span className="navbar-toggler-icon custom-toggler"></span>
         </button>
@@ -76,7 +75,7 @@ const HeaderComponent = ({isLogin}) => {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
     </header>
    
   );
