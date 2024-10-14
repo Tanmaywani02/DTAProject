@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import logo from '../images/logo.png';
-import loginIcon from '../images/log-in.svg';
+//import loginIcon from '../images/log-in.svg';
 import { LuLogIn } from "react-icons/lu";
 import { LuLogOut } from "react-icons/lu";
 import bookmarkIcon from '../images/bookmark.svg';
 import cartIcon from '../images/shopping-cart.svg';
 import '../css/Header.css';
-import userIcon from '../images/user-icon.svg';
+//import userIcon from '../images/user-icon.svg';
 import { useNavigate } from "react-router-dom";
-import { useContext } from 'react';
-import {loginContext} from '../App.js'
+//import { useContext } from 'react';
+//import {loginContext} from '../App.js'
 
 export function Header(){
   const navigate = useNavigate();
@@ -116,9 +116,9 @@ export function Header(){
             <div className="container-fluid topbar">
               <nav className="container d-flex justify-content-between pt-2 pb-2"  id='topbarnav'>
                 
-                <a className="navbar-brand" href="">
+                <button className="navbar-brand btn btn-outline-light" href="">
                   <img src={logo} alt="Logo" width="150" height="50" onClick={()=>navigate("/")} />
-                </a>
+                </button>
       
                 <div id="searchdiv" className="d-none d-sm-none d-md-flex">
       
@@ -130,15 +130,14 @@ export function Header(){
                   {/* <img src={logIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } /> */}
                   {/* {localStorage.getItem("id")!== undefined ? setLogIcon(<IoPerson/>): setLogIcon(<LuLogOut/>)} */}
                   {/* {isUserLogin?<IoPerson/>:<LuLogOut/>} */}
-                 <div onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
+                 <div className="btn btn-link" onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
                  </div>
-                  <a href="">
+                  <button className="btn btn-link">
                     <img src={bookmarkIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/wishlist")}/>
-                  </a>
-      
-                  <a href="" >
+                  </button>
+                  <button className="btn btn-link">
                     <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/cart")}/>
-                  </a>
+                  </button>
                   
                 </div>
               </nav>

@@ -29,17 +29,17 @@ function Login({onSubmitClick}) {
         <div className='loginform'>
         <h1>Login</h1>
         <div className='m-5 d-flex justify-content-center   '>
-        <form class=" w-75" onSubmit={handleSubmit}>
+        <form className=" w-75" onSubmit={handleSubmit}>
           {inputFields.map((input,index)=>{
             return(
               <div>
-                <div class="row mb-3">
+                <div className="row mb-3">
              <div>
-               <label class="form-label fs-6" for="email" >Email  </label>
+               <label className="form-label fs-6" for="email" >Email  </label>
                <input
                  type="text"
                  id="email"
-                 class="form-control form-control"
+                 className="form-control form-control"
                  name="email"
                  value={input.email}
                  onChange={e=>handleChange(index,e)}
@@ -49,13 +49,13 @@ function Login({onSubmitClick}) {
              </div>
            </div>
            
-           <div class="row mb-3">
+           <div className="row mb-3">
              <div>
-               <label class="form-label fs-6" for="password">Password</label>
+               <label className="form-label fs-6" for="password">Password</label>
                <input
                  type="password"
                  id="password"
-                 class="form-control form-control"
+                 className="form-control form-control"
                  name="password"
                  value={input.password}
                  onChange={e=>handleChange(index,e)}
@@ -64,13 +64,13 @@ function Login({onSubmitClick}) {
              </div>
            </div>
            
-           <div class="button  fs-2 mt-4">
-             <button type="submit" class="btn btn-success w-25">Login</button>
+           <div className="button  fs-2 mt-4">
+             <button type="submit" className="btn btn-success w-25">Login</button>
            </div>
  
-           <div class="row mt-4 ">
-             <p class="reg_para" onClick={()=>navigate("/forgetpassword")}> Forgot Password ? <a href=''> Click here </a></p>
-          <p class="reg_para" onClick={()=>navigate("/register")}> New User ? <a href=''> Register </a></p>
+           <div className="row mt-4 ">
+             <p className="reg_para" onClick={()=>navigate("/forgetpassword")}> Forgot Password ? <button className='btn btn-link'> Click here </button></p>
+             <p className="reg_para" onClick={()=>navigate("/register")}> New User ? <button className='btn btn-link'> Register </button></p>
            </div>
               </div>
             )
@@ -81,7 +81,7 @@ function Login({onSubmitClick}) {
       
         </div>
       <div className='loginimage'>
-        <img src={login} alt="image"  />
+        <img src={login} alt="image1"  />
       </div>
     </div>
     </div>
