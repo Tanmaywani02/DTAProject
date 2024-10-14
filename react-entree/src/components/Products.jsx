@@ -26,7 +26,7 @@ function Products({products, onATC, onATL}) {
                                         <a class="btn btn-outline-secondary">
                                             <img src={bookmark} alt="icon" width="35" height="30" class="" onClick={(e)=>onATL(product.id)}/>
                                         </a>
-                                        <button type="button" class="btn btn_add px-4" onClick={(e)=>onATC(product.id)}>Add to Cart</button>
+                                        <button id={`ATC${product.id}`} type="button" class="btn btn_add px-4" onClick={(e)=>onATC(product.id)} >Add to Cart</button>
                                     </div>
                                 </div>
                             </div>

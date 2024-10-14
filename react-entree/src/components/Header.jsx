@@ -1,20 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../images/logo.png';
 import loginIcon from '../images/log-in.svg';
+import { LuLogIn } from "react-icons/lu";
+import { LuLogOut } from "react-icons/lu";
 import bookmarkIcon from '../images/bookmark.svg';
 import cartIcon from '../images/shopping-cart.svg';
 import '../css/Header.css';
 import userIcon from '../images/user-icon.svg';
 import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import {loginContext} from '../App.js'
 
 export function Header(){
+  const navigate = useNavigate();
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [user, setUser] = useState(null);
-    const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showLoginForm, setShowLoginForm] = useState(false);
-    const navigate = useNavigate();
+  const handleLogClick=()=>{
+    console.log("inside")
+    if(localStorage.getItem("id")!==undefined){
+      console.log("in if");
+      
+      localStorage.clear();
+      setLogIcon(<LuLogIn/>)
+      navigate("/")
+    }
+    else{
+      // setLogIcon(<LuLogOut/>)
+      navigate("/login")
+    }
+    console.log("out");
+    
+  }
+
+  const [logIcon, setLogIcon] = useState(<LuLogIn/>)
+  // useEffect(()=>{
+  //   if(localStorage.getItem("id")!==undefined){
+  //     setLogIcon(<LuLogOut/>)
+  //   }
+  // })
+  
+  // const isUserLogin = useContext(loginContext);
+
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [user, setUser] = useState(null);
+    // const [errorMessages, setErrorMessages] = useState({});
+    // const [isSubmitted, setIsSubmitted] = useState(false);
+    // const [showLoginForm, setShowLoginForm] = useState(false);
 
     // const users =[
     //     { id: 1001, username: 'user1@gmail.com', password: '123' },
@@ -97,24 +127,17 @@ export function Header(){
                 </div>
       
                 <div id="iconsdiv" className="iconsdiv">
-                {isLoggedIn ? (
-                    <div className="dropdown">
-                        <button className="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">                    <img src={userIcon} alt="User" width="40" height="20" />
-                        </button>
 
-                        <ul className='dropdown-menu'>
-                            <li><button className="dropdown-item">My Profile</button></li>
-                            <li><button className="dropdown-item" >Logout</button></li> 
-                        </ul>
-                    </div>
-                 ) : (
-                    <img src={loginIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } />
-                )}  
+                  {/* <img src={logIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } /> */}
+                  {/* {localStorage.getItem("id")!== undefined ? setLogIcon(<IoPerson/>): setLogIcon(<LuLogOut/>)} */}
+                  {/* {isUserLogin?<IoPerson/>:<LuLogOut/>} */}
+                 <div onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
+                 </div>
                   <a href="/wishlist">
                     <img src={bookmarkIcon} alt="icon" width="40" height="20" />
                   </a>
       
-                  <a href="/#" >
+                  <a href="" >
                     <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/cart")}/>
                   </a>
                   

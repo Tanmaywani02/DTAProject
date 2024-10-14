@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
@@ -17,6 +17,7 @@ const Cart = () => {
   // useEffect(() =>{
 
   // },[api_cart])
+  
 
   const handleAddQuant = (p)=>{
     if(p.quantity<99){
@@ -42,6 +43,8 @@ const Cart = () => {
       method:'DELETE'
     }).then(res=>res.json())
       .then(data=>console.log(data))
+    
+      document.getElementById(`ATC${p.id}`).disabled = false
   }
 
 
@@ -62,12 +65,20 @@ const Cart = () => {
       alert("please use remove button")
     }
   }
-  useEffect(()=>{
-    fetch(`${cartUrl}?userid=1av3&_embed=product`)
+  
+  const fetching=()=>{
+    fetch(`${cartUrl}?userid=${localStorage.getItem("id")}&_embed=product`)
       .then(res=>res.json())
       .then(data=>setApi_cart(data))
+  }
+
+  useEffect(()=>{
+   
+        fetching();
     
-  },[cartUrl,api_cart])
+  },[])
+
+ 
   return (
     <div>
     <div className="container" id="cartdiv">
@@ -85,17 +96,9 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody >
-          
-           
-              {
-                // console.log(api_cart.products)
-                // <p>{api_cart[0].products}</p>
-                // api_cart.products.map((p)=>{
-                //   <p>{p.prodid}</p>
-                // })
-              }
+      
               {api_cart.map((p)=>(
-                <tr>
+                <tr key={p.id}>
 
                 <td>
                    <div className="d-flex m-0">
@@ -117,7 +120,7 @@ const Cart = () => {
   
   
                 <td>{p.product.price * p.quantity}</td>
-                {/* {console.log("inside")} */}
+                {console.log("inside")}
                 {/* {setTotal(total + (p.product.price * p.quantity))} */}
                 <td className="text-center fs-4 text-danger "><MdDelete onClick={() =>handleRemoveItem(p)} style={{cursor:"pointer"}} /></td>
                 {/* { setTotal(total + (p.product.price * p.quantity))} */}

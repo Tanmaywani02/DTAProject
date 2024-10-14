@@ -26,7 +26,7 @@
       "id": "1",
       "productId": "13",
       "userid": "1av3",
-      "quantity": 2,
+      "quantity": 11,
       "product": {
         "id": "13",
         "title": "Butter Chicken",
@@ -81,6 +81,34 @@
       "productId": "10",
       "userid": "11we",
       "quantity": 3
+    },
+    {
+      "id": "b1e9",
+      "productId": "14",
+      "userid": "a7a3",
+      "quantity": 1
+    },
+    {
+      "id": "e123",
+      "productId": "5",
+      "userid": "a7a3",
+      "quantity": 2,
+      "product": {
+        "id": "5",
+        "title": "Mango Salsa Chicken",
+        "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+        "description": "Enjoy our zesty Mango Salsa Chicken, featuring juicy grilled chicken breast topped with a vibrant, tangy mango salsa, served with a side of seasoned rice and fresh vegetables.",
+        "price": 450,
+        "isavailable": true,
+        "quantity": 20,
+        "category": "Chicken"
+      }
+    },
+    {
+      "id": "4e32",
+      "productId": "5",
+      "userid": "a7a3",
+      "quantity": 1
     }
   ],
   "products": [

@@ -15,12 +15,17 @@ import ForgetPassword from './components/ForgetPassword.jsx';
 import { BrowserRouter } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { createContext, useContext } from "react";
+
+// export const loginContext = createContext();
+
 function App() {
+  // const [isLogin, setLogin] = useState(false);
   const [products, setProducts] = useState([])
   const [filterProducts, setFilterProducts] = useState([])
   const usersUrl = "http://localhost:3000/users"
   const productsUrl = "http://localhost:3000/products"
-  const cartUrl = "http://localhost:3000/cart"
+  const cartUrl = "http://localhost:3000/carts"
   const listUrl = "http://localhost:3000/list"
   const navigate = useNavigate();
 
@@ -30,7 +35,7 @@ function App() {
       .then(data=>setProducts(data))
   },[])
 
-  const [isLogin, setIsLogin] = useState(false)
+  // const [isLogin, setIsLogin] = useState(false)
 
   const handleRegisterUser=(user)=>{
     console.log("creating user")
@@ -43,6 +48,7 @@ function App() {
       .then(data=>{
         alert("Registered Successfully")
         // routing here
+        
         navigate("/")
         // Create cart and list for user here
       })
@@ -56,12 +62,15 @@ function App() {
         if(temp.length>0){
           if(temp[0].password==inp.password){
             // Successful login
-            setIsLogin(true)
+            // setIsLogin(true)
             localStorage.setItem("id",temp[0].id)
             localStorage.setItem("name",temp[0].name)
             // console(`id: ${localStorage.getItem("id")} | isLogin: ${isLogin}`)
             // routing here
+              // setLogin(true);
+              
               navigate("/") 
+
           }
           else{
             console.log("Wrong Password")
@@ -112,20 +121,18 @@ function App() {
     }
   }
 
-  const handleATC=(idx)=>{
+  const handleATC=(pid)=>{
     // localStorage.setItem("id","1av3");
     if(localStorage.getItem("id") !== undefined){
-      fetch(`${cartUrl}/${localStorage.getItem("id")}`)
-        .then(res=>res.json())
-        .then(data=> 
-      {
-      data.products.push({prodid:idx, quant:1})
-      var newcart = {"id":localStorage.getItem("id"), "products":data.products}
-      fetch(`${cartUrl}/${localStorage.getItem("id")}`,{
-        method:"PUT",
-        body: JSON.stringify(newcart)
-      }).then(resp=>resp.json()).then(data1=>console.log(data1))
-    })
+      let data = {"productId":pid, "userid":localStorage.getItem("id"), "quantity":1}
+      fetch(cartUrl,{
+        method:'POST',
+        body:JSON.stringify(data)
+      }).then(res=>res.json())
+        .then(data=>console.log(data))
+      
+      document.getElementById(`ATC${pid}`).disabled = true;
+      
     }
     else{
       // routing to login page here
@@ -158,7 +165,10 @@ function App() {
 
   return (
     <div className="content">
-        <Header isLogin={isLogin}/>
+      {/* <loginContext.Provider value={isLogin}> */}
+      <Header/>
+      {/* </loginContext.Provider> */}
+
         {/* <br/><br/><br/> */}
         {/* <h1 className='text-center'>ECommerce App </h1> */}
         {/* <Carousel/>
@@ -176,6 +186,7 @@ function App() {
         <Routes>
         <Route path="/" element={
          <div>
+
           <Carousel/>
         <Filter onSelectCat={handleSetCat}/>
         <Products products={filterProducts.length==0?products:filterProducts} onATC={handleATC} onATL={handleATL}/>
@@ -195,3 +206,4 @@ function App() {
 }
 
 export default App;
+// export {loginContext};

@@ -10,6 +10,10 @@ function Login({onSubmitClick}) {
     e.preventDefault();
     setInputFields([{email:'', password:''}])
     onSubmitClick(inputFields[0])
+
+
+
+    
   }
   const handleChange=(index,e)=>{
     let data = [...inputFields]
