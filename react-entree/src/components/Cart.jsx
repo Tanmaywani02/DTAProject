@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
@@ -7,7 +7,7 @@ import '../css/Cart.css'
 const Cart = () => {
   // const [api_product, setApi_product] = useState([]);
   const [api_cart, setApi_cart] = useState([]);
-  const [total, setTotal] = useState(0)
+  const [total] = useState(0)
   // const [quantity,setQuantity] = useState(1)
   const cartUrl="http://localhost:3000/carts";
   const navigate = useNavigate();
@@ -106,6 +106,7 @@ const Cart = () => {
                       <img
                         src={p.product.image}
                         style={{ width: "60px", height: "60px" }}
+                        alt="productImage"
                       />
                     </div>
                     <div className="d-flex flex-column px-2">

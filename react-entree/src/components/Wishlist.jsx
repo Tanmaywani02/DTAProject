@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+//import { useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import '../css/Wishlist.css'
 
 const Wishlist = () => {
   const [api_list, setApi_list] = useState([]);
   const listUrl="http://localhost:3000/lists";
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const handleRemoveItem = (p) =>{
     fetch(`${listUrl}/${p.id}`,{
@@ -52,6 +52,7 @@ const Wishlist = () => {
                       <img
                         src={p.product.image}
                         style={{ width: "60px", height: "60px" }}
+                        alt="productImage"
                       />
                     </div>
                     <div className="d-flex flex-column px-2">

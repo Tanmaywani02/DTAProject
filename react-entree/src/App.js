@@ -1,7 +1,7 @@
 // import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
-import Dashboard from "./components/Dashboard";
+//import Dashboard from "./components/Dashboard";
 import Checkout from "./components/Checkout";
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,10 +12,10 @@ import Carousel from './components/Carousel.jsx';
 import Products from './components/Products.jsx';
 import Filter from './components/Filter.jsx';
 import ForgetPassword from './components/ForgetPassword.jsx';
-import { BrowserRouter } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { createContext, useContext } from "react";
+//import { createContext, useContext } from "react";
 import Wishlist from "./components/Wishlist.jsx";
 
 // export const loginContext = createContext();
@@ -59,9 +59,9 @@ function App() {
     fetch(usersUrl)
       .then(res=>res.json())
       .then(data=>{
-        var temp = data.filter(x=>x.email==inp.email)
+        var temp = data.filter(x=>x.email===inp.email)
         if(temp.length>0){
-          if(temp[0].password==inp.password){
+          if(temp[0].password===inp.password){
             // Successful login
             // setIsLogin(true)
             localStorage.setItem("id",temp[0].id)
@@ -87,10 +87,10 @@ function App() {
       .then(res=>res.json())
       .then(data=>{
         console.log("inside")
-        var temp = data.find(x=>x.email==inp.email)
-        if(temp!= undefined){
+        var temp = data.find(x=>x.email===inp.email)
+        if(temp!== undefined){
           console.log(temp)
-          if(temp.email==inp.email && temp.code == inp.code){
+          if(temp.email===inp.email && temp.code === inp.code){
             var temprecord = {id:temp.id, name:temp.name, email:temp.email, code:temp.code, password:inp.password}
             console.log(temprecord)
             fetch(`${usersUrl}/${temp.id}`,{
@@ -114,11 +114,11 @@ function App() {
 
   const handleSetCat=()=>{
     var category = document.getElementById("category").value;
-    if(category=='all'){
+    if(category==='all'){
       setFilterProducts(products)
     }
     else{
-      setFilterProducts(products.filter((x)=>x.category==category))
+      setFilterProducts(products.filter((x)=>x.category===category))
     }
   }
 
@@ -189,7 +189,7 @@ function App() {
 
           <Carousel/>
         <Filter onSelectCat={handleSetCat}/>
-        <Products products={filterProducts.length==0?products:filterProducts} onATC={handleATC} onATL={handleATL}/>
+        <Products products={filterProducts.length===0?products:filterProducts} onATC={handleATC} onATL={handleATL}/>
          </div>
       
       } />
