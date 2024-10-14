@@ -2,8 +2,8 @@ form {
     background-color: #e4e4fa;
   }
   .container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;

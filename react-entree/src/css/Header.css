@@ -1,4 +1,6 @@
-
+.headermain{
+  padding-bottom: 11%;
+}
 #header{
     position: fixed;
     top: 0px;

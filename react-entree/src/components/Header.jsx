@@ -78,7 +78,7 @@ export function Header(){
               );
 
     return (
-        <div>
+        <div className='headermain'>
           <header id="header">
           
             <div className="container-fluid topbar">
