@@ -28,7 +28,8 @@ function App() {
     fetch(productsUrl)
       .then(res=>res.json())
       .then(data=>setProducts(data))
-  },[products])
+  },[])
+
   const [isLogin, setIsLogin] = useState(false)
 
   const handleRegisterUser=(user)=>{

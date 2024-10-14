@@ -5,31 +5,69 @@ import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import '../css/Cart.css'
 const Cart = () => {
-  const [api_product, setApi_product] = useState([]);
+  // const [api_product, setApi_product] = useState([]);
   const [api_cart, setApi_cart] = useState([]);
-  const [quantity,setQuantity] = useState(1)
-  const cartUrl = "http://localhost:3000/cart"
+  const [total, setTotal] = useState(0)
+  // const [quantity,setQuantity] = useState(1)
+  const cartUrl="http://localhost:3000/carts";
   const navigate = useNavigate();
-  const viewCart=(id)=>{
-    return (`${cartUrl}?userid=${id}&_embed=product`)
+  // const viewCart=(id)=>{
+  //   return (`${cartUrl}?userid=${id}&_embed=product`)
+  // }
+  // useEffect(() =>{
+
+  // },[api_cart])
+
+  const handleAddQuant = (p)=>{
+    if(p.quantity<99){
+      p.quantity=p.quantity+1;
+      let data= p;
+      fetch(`${cartUrl}/${p.id}`,{
+        method:'PUT',
+        body:JSON.stringify(data)
+      }).then(res=>res.json())
+        .then(data1=>console.log(data1))
+        // .catch((err)=>console.log(err))
+    }
+    else{
+      //dont sub
+      // alert("please use remove button")
+    }
+  }
+  // const ViewCart=( pid)=>{
+  //   return fetch(`${cartUrl}?userid=1av3&productId=${pid}`)[0]
+  // }
+  const handleRemoveItem = (p) =>{
+    fetch(`${cartUrl}/${p.id}`,{
+      method:'DELETE'
+    }).then(res=>res.json())
+      .then(data=>console.log(data))
   }
 
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/products")
-  //     .then((res) => res.json())
-  //     .then((data) => setApi_product(data));
 
-  //   fetch("http://localhost:3000/cart/1av3")
-  //     .then((res) => res.json())
-  //     .then((data) => setApi_cart(data));
-  // }, ['1av3']);
+  
+  const handleSubQuant = (p)=>{
+    if(p.quantity>1){
+      p.quantity=p.quantity-1;
+      let data= p;
+      fetch(`${cartUrl}/${p.id}`,{
+        method:'PUT',
+        body:JSON.stringify(data)
+      }).then(res=>res.json())
+        .then(data1=>console.log(data1))
+        // .catch((err)=>console.log(err))
+    }
+    else{
+      //dont sub
+      alert("please use remove button")
+    }
+  }
   useEffect(()=>{
-    fetch(viewCart("1av3"))
+    fetch(`${cartUrl}?userid=1av3&_embed=product`)
       .then(res=>res.json())
       .then(data=>setApi_cart(data))
     
-
-  })
+  },[cartUrl,api_cart])
   return (
     <div>
     <div className="container" id="cartdiv">
@@ -56,37 +94,45 @@ const Cart = () => {
                 //   <p>{p.prodid}</p>
                 // })
               }
+              {api_cart.map((p)=>(
+                <tr>
+
+                <td>
+                   <div className="d-flex m-0">
+                     <div>
+                      <img
+                        src={p.product.image}
+                        style={{ width: "60px", height: "60px" }}
+                      />
+                    </div>
+                    <div className="d-flex flex-column px-2">
+                      <h6>{p.product.category}</h6>
+                      <h4>{p.product.title}</h4>
+                    </div>
+                  </div>
+                </td>
+                <td>${p.product.price}</td>
+  
+                <td className="text-center"><FaMinus className="mx-1" style={{"cursor":"pointer"}} onClick={()=>handleSubQuant(p)}/> {p.quantity} <FaPlus className="mx-1" style={{"cursor":"pointer"}} onClick={()=>handleAddQuant(p)}/></td>
+  
+  
+                <td>{p.product.price * p.quantity}</td>
+                {/* {console.log("inside")} */}
+                {/* {setTotal(total + (p.product.price * p.quantity))} */}
+                <td className="text-center fs-4 text-danger "><MdDelete onClick={() =>handleRemoveItem(p)} style={{cursor:"pointer"}} /></td>
+                {/* { setTotal(total + (p.product.price * p.quantity))} */}
+              </tr>
+                
+                
+              ))}
             
 
-             {/* <tr>
-
-              <td>
-                 <div className="d-flex m-0">
-                   <div>
-                    <img
-                      src={e.image}
-                      style={{ width: "60px", height: "60px" }}
-                    />
-                  </div>
-                  <div className="d-flex flex-column px-2">
-                    <h6>{e.category}</h6>
-                    <h4>{e.title}</h4>
-                  </div>
-                </div>
-              </td>
-              <td>${e.price}</td>
-
-              <td className="text-center"><FaMinus className="mx-1" /> {e.quantity} <FaPlus className="mx-1" /></td>
-
-
-              <td>{e.price * e.quantity}</td>
-              <td className="text-center fs-4 text-danger "><MdDelete /></td>
-            </tr> */}
+             
           
         </tbody>
 
        
-        <button className="btn border mt-3 bg-warning ">Clear All</button>
+        
        
       </table>
 
@@ -94,21 +140,21 @@ const Cart = () => {
         <h4 className="text-center">ORDER SUMMARY</h4>
         <div className="d-flex justify-content-between mt-4">
           <p>Subtotal</p>
-          <p><b>  $ 000</b></p>
+          <p><b>  ₹ {total}</b></p>
         </div>
 
         <div className="d-flex justify-content-between mt-3">
-          <p>Estiamted Shopping</p>
-          <p> $ 000</p>
+          <p>Delivery Charges</p>
+          <p> ₹ 100</p>
         </div>
         <div className="d-flex justify-content-between mt-2">
-          <p>Shopping Discount</p>
-          <p> $ 000</p>
+          <p>GST</p>
+          <p> ₹ 180</p>
         </div>
 
         <div className="d-flex justify-content-between mt-2">
-          <p><b>Subtotal</b></p>
-          <p><b> $ 000</b></p>
+          <p><b>Total</b></p>
+          <p><b> ₹ 0</b></p>
         </div>
         <button className="btn w-100 bg-info" onClick={() => {
         navigate("/checkout");
