@@ -22,7 +22,6 @@ const Cart = () => {
         body:JSON.stringify(data)
       }).then(res=>res.json())
         .then(data1=>console.log(data1))
-        // .catch((err)=>console.log(err))
         setCount(count+1)
     }
   }
@@ -113,24 +112,12 @@ const Cart = () => {
   
   
                 <td>{p.product.price * p.quantity}</td>
-                {console.log("inside")}
-                {/* {setTotal(total + (p.product.price * p.quantity))} */}
-                {/* {setTotal(total+ (p.product.price * p.quantity))} */}
                 <td className="text-center fs-4 text-danger "><MdDelete onClick={() =>handleRemoveItem(p)} style={{cursor:"pointer"}} /></td>
-                {/* { setTotal(total + (p.product.price * p.quantity))} */}
               </tr>
-                
-                
                 )})}
-            
 
-             
-          
         </tbody>
 
-       
-        
-       
       </table>
 
       <div className="w-50 mx-4 border p-3 border-black h-25 mt-4">
