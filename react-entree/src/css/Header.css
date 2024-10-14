@@ -13,6 +13,7 @@
     
     #topbarnav{
       margin-top: 0px;
+      box-shadow: none;
     }
     
     #searchdiv{
