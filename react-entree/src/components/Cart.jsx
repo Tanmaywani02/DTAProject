@@ -5,19 +5,13 @@ import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import '../css/Cart.css'
 const Cart = () => {
-  // const [api_product, setApi_product] = useState([]);
+
+  const [count, setCount] = useState(0);
   const [api_cart, setApi_cart] = useState([]);
-  const [total] = useState(0)
-  // const [quantity,setQuantity] = useState(1)
+  const [total, setTotal] = useState(0)
   const cartUrl="http://localhost:3000/carts";
   const navigate = useNavigate();
-  // const viewCart=(id)=>{
-  //   return (`${cartUrl}?userid=${id}&_embed=product`)
-  // }
-  // useEffect(() =>{
-
-  // },[api_cart])
-  
+  let totalp=0;
 
   const handleAddQuant = (p)=>{
     if(p.quantity<99){
@@ -29,22 +23,17 @@ const Cart = () => {
       }).then(res=>res.json())
         .then(data1=>console.log(data1))
         // .catch((err)=>console.log(err))
-    }
-    else{
-      //dont sub
-      // alert("please use remove button")
+        setCount(count+1)
     }
   }
-  // const ViewCart=( pid)=>{
-  //   return fetch(`${cartUrl}?userid=1av3&productId=${pid}`)[0]
-  // }
+
   const handleRemoveItem = (p) =>{
     fetch(`${cartUrl}/${p.id}`,{
       method:'DELETE'
     }).then(res=>res.json())
       .then(data=>console.log(data))
-    
-      document.getElementById(`ATC${p.id}`).disabled = false
+      setCount(count+1)
+      // document.getElementById(`ATC${p.id}`).disabled = false
   }
 
 
@@ -58,7 +47,8 @@ const Cart = () => {
         body:JSON.stringify(data)
       }).then(res=>res.json())
         .then(data1=>console.log(data1))
-        // .catch((err)=>console.log(err))
+        setCount(count+1)
+
     }
     else{
       //dont sub
@@ -70,13 +60,13 @@ const Cart = () => {
     fetch(`${cartUrl}?userid=${localStorage.getItem("id")}&_embed=product`)
       .then(res=>res.json())
       .then(data=>setApi_cart(data))
-  }
+    // setTotal(0)
+      
+    }
 
   useEffect(()=>{
-   
-        fetching();
-    
-  },[])
+    fetching();
+  },[count])
 
  
   return (
@@ -97,7 +87,9 @@ const Cart = () => {
         </thead>
         <tbody >
       
-              {api_cart.map((p)=>(
+              {api_cart.map((p)=>{
+                totalp += p.product.price * p.quantity;
+              return(
                 <tr key={p.id}>
 
                 <td>
@@ -123,12 +115,13 @@ const Cart = () => {
                 <td>{p.product.price * p.quantity}</td>
                 {console.log("inside")}
                 {/* {setTotal(total + (p.product.price * p.quantity))} */}
+                {/* {setTotal(total+ (p.product.price * p.quantity))} */}
                 <td className="text-center fs-4 text-danger "><MdDelete onClick={() =>handleRemoveItem(p)} style={{cursor:"pointer"}} /></td>
                 {/* { setTotal(total + (p.product.price * p.quantity))} */}
               </tr>
                 
                 
-              ))}
+                )})}
             
 
              
@@ -144,21 +137,23 @@ const Cart = () => {
         <h4 className="text-center">ORDER SUMMARY</h4>
         <div className="d-flex justify-content-between mt-4">
           <p>Subtotal</p>
-          <p><b>  ₹ {total}</b></p>
+          <p><b>  ₹ {totalp}</b></p>
         </div>
 
         <div className="d-flex justify-content-between mt-3">
           <p>Delivery Charges</p>
-          <p> ₹ 100</p>
+          <p> ₹ {totalp * 0.05}</p> 
+          {/* 5% Delivery charges */}
         </div>
         <div className="d-flex justify-content-between mt-2">
           <p>GST</p>
-          <p> ₹ 180</p>
+          <p> ₹ {totalp*0.18}</p>
+          {/* 18% GST */}
         </div>
 
         <div className="d-flex justify-content-between mt-2">
           <p><b>Total</b></p>
-          <p><b> ₹ 0</b></p>
+          <p><b> ₹ {totalp + (totalp * 0.05) + (totalp*0.18)}</b></p>
         </div>
         <button className="btn w-100 bg-info" onClick={() => {
         navigate("/checkout");

@@ -23,60 +23,6 @@
   ],
   "carts": [
     {
-      "id": "1",
-      "productId": "13",
-      "userid": "1av3",
-      "quantity": 8,
-      "product": {
-        "id": "13",
-        "title": "Butter Chicken",
-        "image": "https://cdn.dummyjson.com/recipe-images/20.webp",
-        "description": "Savor the rich and creamy flavors of our Butter Chicken, a classic Indian dish featuring tender pieces of chicken simmered in a velvety tomato-based sauce, infused with aromatic spices and finished with a touch of butter and cream. Enjoy it with warm naan or fragrant basmati rice for a truly indulgent meal.",
-        "price": 450,
-        "isavailable": true,
-        "quantity": 11,
-        "category": "Chicken"
-      }
-    },
-    {
-      "id": "3",
-      "productId": "11",
-      "userid": "1av3",
-      "quantity": 2
-    },
-    {
-      "id": "4",
-      "productId": "6",
-      "userid": "1av3",
-      "quantity": 2,
-      "product": {
-        "id": "6",
-        "title": "Quinoa Salad with Avocado",
-        "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
-        "description": "Relish our refreshing Quinoa Salad with Avocado, a nutritious blend of fluffy quinoa, ripe avocado, cherry tomatoes, cucumbers, and mixed greens, all tossed in a light, zesty vinaigrette.",
-        "price": 900,
-        "isavailable": true,
-        "quantity": 111,
-        "category": "Salad"
-      }
-    },
-    {
-      "id": "5",
-      "productId": "9",
-      "userid": "1av3",
-      "quantity": 1,
-      "product": {
-        "id": "9",
-        "title": "Shrimp Scampi Pasta",
-        "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
-        "description": "Treat yourself to our Shrimp Scampi Pasta, featuring succulent shrimp sautéed in a garlic butter and white wine sauce, tossed with al dente pasta and garnished with fresh parsley and a hint of lemon zest.",
-        "price": 370,
-        "isavailable": true,
-        "quantity": 56,
-        "category": "Pasta"
-      }
-    },
-    {
       "id": "6",
       "productId": "10",
       "userid": "11we",
@@ -108,6 +54,34 @@
       "id": "4e32",
       "productId": "5",
       "userid": "a7a3",
+      "quantity": 1
+    },
+    {
+      "id": "51de",
+      "productId": "2",
+      "userid": "1av3",
+      "quantity": 1
+    },
+    {
+      "id": "6642",
+      "productId": "4",
+      "userid": "1av3",
+      "quantity": 2,
+      "product": {
+        "id": "4",
+        "title": "Chicken Biryani",
+        "image": "https://cdn.dummyjson.com/recipe-images/11.webp",
+        "description": "Experience the rich flavors of our Chicken Biryani, a fragrant basmati rice dish layered with tender, marinated chicken, aromatic spices, and fresh herbs, served with a side of cooling raita.",
+        "price": 350,
+        "isavailable": true,
+        "quantity": 23,
+        "category": "Chicken"
+      }
+    },
+    {
+      "id": "ce15",
+      "productId": "14",
+      "userid": "1av3",
       "quantity": 1
     }
   ],
@@ -339,11 +313,6 @@
     }
   ],
   "lists": [
-    {
-      "id": "2",
-      "productId": "1",
-      "userid": "1av3"
-    },
     {
       "id": "4",
       "productId": "11",

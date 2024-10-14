@@ -4,6 +4,7 @@ import { MdDelete } from "react-icons/md";
 import '../css/Wishlist.css'
 
 const Wishlist = () => {
+  const [count, setCount] = useState(0);
   const [api_list, setApi_list] = useState([]);
   const listUrl="http://localhost:3000/lists";
   //const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Wishlist = () => {
     }).then(res=>res.json())
       .then(data=>console.log(data))
     //   document.getElementById(`ATL${p.id}`).disabled = false
+    setCount(1)
   }
 
   const fetching=()=>{
@@ -24,7 +26,7 @@ const Wishlist = () => {
 
   useEffect(()=>{
     fetching();
-  },[])
+  },[count])
 
 
   return (
