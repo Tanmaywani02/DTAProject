@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import '../css/ForgetPassword.css'
 import login from '../images/login.jpg'
+import { useNavigate } from "react-router-dom";
+
 
 function ForgetPassword({onForgetPassword}) {
+  const navigate = useNavigate();
+
   const [inputFields, setInputFields] = useState([{email:'', code:'', password:''}])
   const [cnfpassword, setCnfPassword] = useState('')
   const handleSubmit=(e)=>{
@@ -108,12 +112,12 @@ function ForgetPassword({onForgetPassword}) {
             </div>
   
             <div class="row mt-4 ">
-           <p class="reg_para"> New User ?  <a routerLink="/signup" class=""> Signup  </a></p>
+           <p class="reg_para"> New User ?  <a class="" style={{cursor:"pointer"}} onClick={()=>navigate("/register")}> Signup  </a></p>
             </div>
 
             <div class="row ">
                 <p class="reg_para">
-                  Already have acount ? <a routerLink="/login" class=""> Login </a>
+                  Already have acount ? <a class="" style={{cursor:"pointer"}} onClick={()=>navigate("/login")}> Login </a>
                 </p>
             </div>
                 </div>

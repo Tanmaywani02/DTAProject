@@ -23,7 +23,7 @@ export function Header(){
       navigate("/")
     }
     else{
-      setLogIcon(<LuLogOut/>)
+      // setLogIcon(<LuLogOut/>)
       navigate("/login")
     }
     console.log("out");

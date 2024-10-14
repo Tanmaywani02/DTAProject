@@ -5,8 +5,12 @@ import facebookIcon from '../images/facebook.svg';
 import instagramIcon from '../images/instagram.svg';
 import twitterIcon from '../images/twitter.svg';
 import '../css/Footer.css';
+import { useNavigate } from "react-router-dom";
+
 
 const FooterComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer_main">
       <div className="footer-top d-flex pt-3">
@@ -37,7 +41,7 @@ const FooterComponent = () => {
         <div className="contain">
           <p className="mp">SIGN UP</p>
           {/* <p><Link className="footer_link" to="/signup">Register</Link></p> */}
-          <p>Register</p>
+          <p style={{cursor:"pointer"}} onClick={()=>{navigate("/register")}}>Register</p>
         </div>
       </div>
       <div className="footer_copyright d-flex flex-wrap pb-3">
