@@ -82,7 +82,7 @@ const Cart = () => {
   return (
     <div>
     <div className="container" id="cartdiv">
-    <h2 className="text-center">Your Cart</h2>
+    <h2 className="text-center pt-3">Your Cart</h2>
       <div className="d-flex mx-3">
       
       <table className="table">

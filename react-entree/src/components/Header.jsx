@@ -16,15 +16,14 @@ export function Header(){
 
   const handleLogClick=()=>{
     console.log("inside")
-    if(localStorage.getItem("id")!==undefined){
-      console.log("in if");
-      
+    if(localStorage.getItem("id")!==null){
       localStorage.clear();
       setLogIcon(<LuLogIn/>)
+      alert("Logout Successfully")
       navigate("/")
     }
     else{
-      // setLogIcon(<LuLogOut/>)
+      setLogIcon(<LuLogOut/>)
       navigate("/login")
     }
     console.log("out");
@@ -133,8 +132,8 @@ export function Header(){
                   {/* {isUserLogin?<IoPerson/>:<LuLogOut/>} */}
                  <div onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
                  </div>
-                  <a href="/wishlist">
-                    <img src={bookmarkIcon} alt="icon" width="40" height="20" />
+                  <a href="">
+                    <img src={bookmarkIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/wishlist")}/>
                   </a>
       
                   <a href="" >

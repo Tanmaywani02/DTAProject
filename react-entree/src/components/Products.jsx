@@ -23,7 +23,7 @@ function Products({products, onATC, onATL}) {
                                     </div>
                                     <p class="card-text fs-6 text-justify p_des">{product.description}</p>
                                     <div class="d-flex justify-content-between mt-2">
-                                        <a class="btn btn-outline-secondary">
+                                        <a class="btn btn-outline-secondary" id={`ATL${product.id}`}>
                                             <img src={bookmark} alt="icon" width="35" height="30" class="" onClick={(e)=>onATL(product.id)}/>
                                         </a>
                                         <button id={`ATC${product.id}`} type="button" class="btn btn_add px-4" onClick={(e)=>onATC(product.id)} >Add to Cart</button>

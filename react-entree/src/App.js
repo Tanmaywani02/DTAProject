@@ -16,6 +16,7 @@ import { BrowserRouter } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { createContext, useContext } from "react";
+import Wishlist from "./components/Wishlist.jsx";
 
 // export const loginContext = createContext();
 
@@ -26,7 +27,7 @@ function App() {
   const usersUrl = "http://localhost:3000/users"
   const productsUrl = "http://localhost:3000/products"
   const cartUrl = "http://localhost:3000/carts"
-  const listUrl = "http://localhost:3000/list"
+  const listUrl = "http://localhost:3000/lists"
   const navigate = useNavigate();
 
   useEffect(()=>{
@@ -123,7 +124,7 @@ function App() {
 
   const handleATC=(pid)=>{
     // localStorage.setItem("id","1av3");
-    if(localStorage.getItem("id") !== undefined){
+    if(localStorage.getItem("id") !== null){
       let data = {"productId":pid, "userid":localStorage.getItem("id"), "quantity":1}
       fetch(cartUrl,{
         method:'POST',
@@ -132,6 +133,7 @@ function App() {
         .then(data=>console.log(data))
       
       document.getElementById(`ATC${pid}`).disabled = true;
+      alert("Dish added to Cart")
       
     }
     else{
@@ -140,24 +142,22 @@ function App() {
     }
   }
 
-  const handleATL=(idx)=>{
+  const handleATL=(pid)=>{
     // localStorage.setItem("id","1av3");
-    if(localStorage.getItem("id") !== undefined){
-      fetch(`${listUrl}/${localStorage.getItem("id")}`)
-        .then(res=>res.json())
-        .then(data=> 
-      {
-      data.products.push(idx)
-      var newList = {"id":localStorage.getItem("id"), "products":data.products}
-      fetch(`${listUrl}/${localStorage.getItem("id")}`,{
-        method:"PUT",
-        body: JSON.stringify(newList)
-      }).then(resp=>resp.json()).then(data1=>console.log(data1))
-    })
+    if(localStorage.getItem("id") !== null){
+      let data = {"productId":pid, "userid":localStorage.getItem("id")}
+      fetch(listUrl,{
+        method:'POST',
+        body:JSON.stringify(data)
+      }).then(res=>res.json())
+        .then(data=>console.log(data))
+      document.getElementById(`ATL${pid}`).disabled = true;
+      alert("Dish added to Favourites")
+
     }
     else{
       // routing to login page here
-      alert("login first")
+      // alert("login first")
       navigate("/login")
     }
   }
@@ -197,6 +197,7 @@ function App() {
         <Route path="/register" element={<Register onSubmitClick={handleRegisterUser}/>} />
         <Route path="/forgetpassword" element={<ForgetPassword onForgetPassword={handleForgetPassword}/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/wishlist" element={<Wishlist/>} />
         <Route path="/checkout" element={<Checkout/>} />
       </Routes>
       <Footer/>
