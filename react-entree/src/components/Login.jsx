@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../css/Login.css'
 import login from '../images/login.jpg'
+import { useNavigate } from "react-router-dom";
+
 
 function Login({onSubmitClick}) {
   const [inputFields, setInputFields] = useState([{email:'', password:''}])
@@ -15,6 +17,8 @@ function Login({onSubmitClick}) {
     setInputFields(data)
     console.log(data)
   }
+  const navigate = useNavigate();
+
   return (
     <div className='container' id='loginContainer'>
       <div className='logincard'>
@@ -61,8 +65,8 @@ function Login({onSubmitClick}) {
            </div>
  
            <div class="row mt-4 ">
-             <p class="reg_para"> Forgot Password ?  <a routerLink="/forgetpassword" class="" > Click here  </a></p>
-          <p class="reg_para"> New User ?  <a routerLink="/signup" class="" > Register  </a></p>
+             <p class="reg_para" onClick={()=>navigate("/forgetpassword")}> Forgot Password ? <a href=''> Click here </a></p>
+          <p class="reg_para" onClick={()=>navigate("/register")}> New User ? <a href=''> Register </a></p>
            </div>
               </div>
             )

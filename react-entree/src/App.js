@@ -12,7 +12,9 @@ import Carousel from './components/Carousel.jsx';
 import Products from './components/Products.jsx';
 import Filter from './components/Filter.jsx';
 import ForgetPassword from './components/ForgetPassword.jsx';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 function App() {
   const [products, setProducts] = useState([])
   const [filterProducts, setFilterProducts] = useState([])
@@ -20,6 +22,7 @@ function App() {
   const productsUrl = "http://localhost:3000/products"
   const cartUrl = "http://localhost:3000/cart"
   const listUrl = "http://localhost:3000/list"
+  const navigate = useNavigate();
 
   useEffect(()=>{
     fetch(productsUrl)
@@ -27,6 +30,7 @@ function App() {
       .then(data=>setProducts(data))
   },[products])
   const [isLogin, setIsLogin] = useState(false)
+
   const handleRegisterUser=(user)=>{
     console.log("creating user")
     console.log(user)
@@ -38,7 +42,7 @@ function App() {
       .then(data=>{
         alert("Registered Successfully")
         // routing here
-        
+        navigate("/")
         // Create cart and list for user here
       })
   }
@@ -56,6 +60,7 @@ function App() {
             localStorage.setItem("name",temp[0].name)
             // console(`id: ${localStorage.getItem("id")} | isLogin: ${isLogin}`)
             // routing here
+              navigate("/") 
           }
           else{
             console.log("Wrong Password")
@@ -81,8 +86,9 @@ function App() {
               method:"PUT",
               body:JSON.stringify(temprecord)
             }).then(res=>res.json())
-              .then(data=>console.log(data)//Password updated successfully
-              )
+              .then(data=>{console.log(data)//Password updated successfully
+                navigate("/login")
+          })
           }
           else{
             alert("Wrong Answer")
@@ -106,7 +112,7 @@ function App() {
   }
 
   const handleATC=(idx)=>{
-    localStorage.setItem("id","1av3");
+    // localStorage.setItem("id","1av3");
     if(localStorage.getItem("id") !== undefined){
       fetch(`${cartUrl}/${localStorage.getItem("id")}`)
         .then(res=>res.json())
@@ -122,11 +128,12 @@ function App() {
     }
     else{
       // routing to login page here
+      navigate("/login")
     }
   }
 
   const handleATL=(idx)=>{
-    localStorage.setItem("id","1av3");
+    // localStorage.setItem("id","1av3");
     if(localStorage.getItem("id") !== undefined){
       fetch(`${listUrl}/${localStorage.getItem("id")}`)
         .then(res=>res.json())
@@ -142,6 +149,8 @@ function App() {
     }
     else{
       // routing to login page here
+      alert("login first")
+      navigate("/login")
     }
   }
 
@@ -151,20 +160,34 @@ function App() {
         <Header isLogin={isLogin}/>
         {/* <br/><br/><br/> */}
         {/* <h1 className='text-center'>ECommerce App </h1> */}
-        <Carousel/>
+        {/* <Carousel/>
         <Filter onSelectCat={handleSetCat}/>
-        <Products products={filterProducts.length==0?products:filterProducts} onATC={handleATC} onATL={handleATL}/>
+        <Products products={filterProducts.length==0?products:filterProducts} onATC={handleATC} onATL={handleATL}/> */}
         {/* <Login onSubmitClick={handleLoginUser}/> */}
         {/* <Register onSubmitClick={handleRegisterUser}/> */}
         {/* <ForgetPassword onForgetPassword={handleForgetPassword}/> */}
         
         {/* <br/><br/><br/> */}
-        <Footer/>
-        {/* <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/cart" element={<Cart />} />
+        
+        {/* <BrowserRouter>
+          
+        </BrowserRouter> */}
+        <Routes>
+        <Route path="/" element={
+         <div>
+          <Carousel/>
+        <Filter onSelectCat={handleSetCat}/>
+        <Products products={filterProducts.length==0?products:filterProducts} onATC={handleATC} onATL={handleATL}/>
+         </div>
+      
+      } />
+        <Route path="/login" element={<Login onSubmitClick={handleLoginUser}/>} />
+        <Route path="/register" element={<Register onSubmitClick={handleRegisterUser}/>} />
+        <Route path="/forgetpassword" element={<ForgetPassword onForgetPassword={handleForgetPassword}/>} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/checkout" element={<Checkout/>} />
-      </Routes> */}
+      </Routes>
+      <Footer/>
     </div>
 
   );

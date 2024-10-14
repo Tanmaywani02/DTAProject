@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import register from '../images/register.jpg'
+import { useNavigate } from "react-router-dom";
+
 
 function Register({onSubmitClick}) {
+  const navigate = useNavigate();
   const [inputFields, setInputFields] = useState([{name:'', email:'', code:'', password:''}])
   const [cnf_pass, setCnfPass] = useState('')
   const handleSubmit=(e)=>{
@@ -128,8 +131,8 @@ function Register({onSubmitClick}) {
           </div>
 
           <div class="row mt-4">
-            <p class="reg_para">
-              Already have acount ? <a routerLink="/login" class=""> Login </a>
+            <p class="reg_para" onClick={()=>navigate("/login")}>
+              Already have acount ? <a href=''> Login </a>
             </p>
           </div>
           </div>

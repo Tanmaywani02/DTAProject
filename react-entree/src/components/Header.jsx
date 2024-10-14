@@ -5,6 +5,7 @@ import bookmarkIcon from '../images/bookmark.svg';
 import cartIcon from '../images/shopping-cart.svg';
 import '../css/Header.css';
 import userIcon from '../images/user-icon.svg';
+import { useNavigate } from "react-router-dom";
 
 export function Header(){
 
@@ -13,6 +14,7 @@ export function Header(){
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
+    const navigate = useNavigate();
 
     // const users =[
     //     { id: 1001, username: 'user1@gmail.com', password: '123' },
@@ -85,8 +87,8 @@ export function Header(){
             <div className="container-fluid topbar">
               <nav className="container d-flex justify-content-between pt-2 pb-2"  id='topbarnav'>
                 
-                <a className="navbar-brand" href="/#">
-                  <img src={logo} alt="Logo" width="150" height="50" />
+                <a className="navbar-brand" href="">
+                  <img src={logo} alt="Logo" width="150" height="50" onClick={()=>navigate("/")} />
                 </a>
       
                 <div id="searchdiv" className="d-none d-sm-none d-md-flex">
@@ -106,14 +108,14 @@ export function Header(){
                         </ul>
                     </div>
                  ) : (
-                    <img src={loginIcon} alt="Login" width="40" height="20" onClick={() => setShowLoginForm(!showLoginForm)} />
+                    <img src={loginIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } />
                 )}  
                   <a href="/wishlist">
                     <img src={bookmarkIcon} alt="icon" width="40" height="20" />
                   </a>
       
                   <a href="/#" >
-                    <img src={cartIcon} alt="icon" width="40" height="20" />
+                    <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/cart")}/>
                   </a>
                   
                 </div>

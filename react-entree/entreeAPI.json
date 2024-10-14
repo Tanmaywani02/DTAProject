@@ -267,10 +267,16 @@
     {
       "id": "1av3",
       "products": [
-        "1",
-        "2",
         {
           "prodid": "16",
+          "quant": 1
+        },
+        {
+          "prodid": "1",
+          "quant": 1
+        },
+        {
+          "prodid": "1",
           "quant": 1
         }
       ]
