@@ -13,10 +13,13 @@ const Cart = () => {
     fetch("http://localhost:3000/products")
       .then((res) => res.json())
       .then((data) => setApi_product(data));
+   
+  }, [data]);
+  useEffect(() =>{
     fetch("http://localhost:3000/cart/1")
-      .then((res) => res.json())
-      .then((data) => setApi_cart(data));
-  }, []);
+    .then((res) => res.json())
+    .then((data) => setApi_cart(data));
+  },[data])
   return (
     <div className="container">
       <h2 className="text-center">Your Cart</h2>

@@ -118,39 +118,43 @@
       "products": []
     }
   ],
-  "cart": [
+  "carts": [
     {
-      "id": "1",
-      "products": [
-        {
-          "prodid": "1",
-          "quant": 1
-        },
-        {
-          "prodid": "3",
-          "quant": 1
-        },
-        {
-          "prodid": "4",
-          "quant": 1
-        },
-        {
-          "prodid": "2",
-          "quant": 1
-        }
-      ]
+      "id":"1",
+      "productId":"2",
+      "userid":"1av3",
+      "quantity":1
     },
     {
-      "id": "2",
-      "products": []
+      "id":"2",
+      "productId":"3",
+      "userid":"1av3",
+      "quantity":3
     },
     {
-      "id": "5a2e",
-      "products": []
+      "id":"3",
+      "productId":"2",
+      "userid":"1av3",
+      "quantity":2
     },
     {
-      "id": "cee5",
-      "products": []
+      "id":"4",
+      "productId":"1",
+      "userid":"1av3",
+      "quantity":3
+    },
+    {
+      "id":"5",
+      "productId":"4",
+      "userid":"1av3",
+      "quantity":3
+    },
+    {
+      "id":"6",
+      "productId":"4",
+      "userid":"11we",
+      "quantity":3
     }
+   
   ]
 }
