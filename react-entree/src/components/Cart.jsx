@@ -67,13 +67,14 @@ const Cart = () => {
     fetching();
   },[count])
 
- 
+
+  
   return (
+   
     <div>
     <div className="container" id="cartdiv">
     <h2 className="text-center pt-3">Your Cart</h2>
       <div className="d-flex mx-3">
-      
       <table className="table">
         <thead>
           <tr className="">
@@ -129,18 +130,18 @@ const Cart = () => {
 
         <div className="d-flex justify-content-between mt-3">
           <p>Delivery Charges</p>
-          <p> ₹ {totalp * 0.05}</p> 
+          <p> ₹ {parseInt(totalp * 0.05)}</p> 
           {/* 5% Delivery charges */}
         </div>
         <div className="d-flex justify-content-between mt-2">
           <p>GST</p>
-          <p> ₹ {totalp*0.18}</p>
+          <p> ₹ {parseInt(totalp*0.18)}</p>
           {/* 18% GST */}
         </div>
 
         <div className="d-flex justify-content-between mt-2">
           <p><b>Total</b></p>
-          <p><b> ₹ {totalp + (totalp * 0.05) + (totalp*0.18)}</b></p>
+          <p><b> ₹ {totalp + parseInt(totalp * 0.05) + parseInt(totalp*0.18)}</b></p>
         </div>
         <button className="btn w-100 bg-info" onClick={() => {
         navigate("/checkout");
@@ -151,7 +152,9 @@ const Cart = () => {
       </div>
     </div>
 
-  );
+  )
+ 
+
 };
 
 export default Cart;

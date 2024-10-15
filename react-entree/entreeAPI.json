@@ -83,6 +83,22 @@
       "productId": "14",
       "userid": "1av3",
       "quantity": 1
+    },
+    {
+      "id": "d1b9",
+      "productId": "8",
+      "userid": "850f",
+      "quantity": 3,
+      "product": {
+        "id": "8",
+        "title": "Caprese Salad",
+        "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
+        "description": "Indulge in our Caprese Salad, a delightful combination of ripe tomatoes, fresh mozzarella, and fragrant basil leaves, drizzled with extra virgin olive oil and a touch of balsamic reduction.",
+        "price": 150,
+        "isavailable": true,
+        "quantity": 98,
+        "category": "Salad"
+      }
     }
   ],
   "products": [
@@ -310,6 +326,13 @@
       "email": "xxx@abc.com",
       "code": "doggy",
       "password": "9999"
+    },
+    {
+      "id": "850f",
+      "name": "ppp",
+      "email": "ppp@abc.com",
+      "code": "dogo",
+      "password": "pppp"
     }
   ],
   "lists": [

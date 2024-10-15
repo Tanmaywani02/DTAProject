@@ -14,6 +14,24 @@ import { useNavigate } from "react-router-dom";
 export function Header(){
   const navigate = useNavigate();
 
+  const handleCartClick=()=>{
+    if(localStorage.getItem("id")!==null){
+      navigate("/cart")
+    }
+    else{
+      navigate("/login")
+    }
+  }
+
+  const handleWishlistClick=()=>{
+    if(localStorage.getItem("id")!==null){
+      navigate("/wishlist")
+    }
+    else{
+      navigate("/login")
+    }
+  }
+
   const handleLogClick=()=>{
     console.log("inside")
     if(localStorage.getItem("id")!==null){
@@ -60,10 +78,10 @@ export function Header(){
                  <div className="btn btn-link logicon" onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
                  </div>
                   <button className="btn btn-link">
-                    <img src={bookmarkIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/wishlist")}/>
+                    <img src={bookmarkIcon} alt="icon" width="40" height="20" onClick={()=>handleWishlistClick()}/>
                   </button>
                   <button className="btn btn-link">
-                    <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/cart")}/>
+                    <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>handleCartClick()}/>
                   </button>
                   
                 </div>
