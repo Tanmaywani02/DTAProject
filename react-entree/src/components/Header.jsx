@@ -1,151 +1,181 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../images/logo.png';
-import loginIcon from '../images/log-in.svg';
+import React, { useEffect, useState } from "react";
+import logo from "../images/logo.png";
+import loginIcon from "../images/log-in.svg";
 import { LuLogIn } from "react-icons/lu";
 import { LuLogOut } from "react-icons/lu";
-import bookmarkIcon from '../images/bookmark.svg';
-import cartIcon from '../images/shopping-cart.svg';
-import '../css/Header.css';
-import userIcon from '../images/user-icon.svg';
+import bookmarkIcon from "../images/bookmark.svg";
+import cartIcon from "../images/shopping-cart.svg";
+import "../css/Header.css";
+import userIcon from "../images/user-icon.svg";
 import { useNavigate } from "react-router-dom";
-import { useContext } from 'react';
-import {loginContext} from '../App.js'
+import { useContext } from "react";
+import { loginContext } from "../App.js";
 
-export function Header(){
+
+
+export function Header(props) {
   const navigate = useNavigate();
+  const [logIcon, setLogIcon] = useState(<LuLogIn />);
+  useEffect(() => {
+    props.logindata([logIcon, setLogIcon] );
+  });
 
-  const handleLogClick=()=>{
-    console.log("inside")
-    if(localStorage.getItem("id")!==null){
+  const handleLogClick = () => {
+    console.log("inside");
+    if (localStorage.getItem("id") !== null) {
       localStorage.clear();
-      setLogIcon(<LuLogIn/>)
-      alert("Logout Successfully")
-      navigate("/")
-    }
-    else{
-      // setLogIcon(<LuLogOut/>)
-      navigate("/login")
+      setLogIcon(<LuLogIn />);
+      alert("Logout Successfully");
+      navigate("/");
+    } else {
+      setLogIcon(<LuLogOut />);
+      navigate("/login");
     }
     console.log("out");
-    
-  }
+  };
 
-  const [logIcon, setLogIcon] = useState(<LuLogIn/>)
+ 
   // useEffect(()=>{
   //   if(localStorage.getItem("id")!==undefined){
   //     setLogIcon(<LuLogOut/>)
   //   }
   // })
-  
+
   // const isUserLogin = useContext(loginContext);
 
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-    // const [user, setUser] = useState(null);
-    // const [errorMessages, setErrorMessages] = useState({});
-    // const [isSubmitted, setIsSubmitted] = useState(false);
-    // const [showLoginForm, setShowLoginForm] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [user, setUser] = useState(null);
+  // const [errorMessages, setErrorMessages] = useState({});
+  // const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [showLoginForm, setShowLoginForm] = useState(false);
 
-    // const users =[
-    //     { id: 1001, username: 'user1@gmail.com', password: '123' },
-    //     { id: 1002, username: 'user2@gmail.com', password: '234' },
-    //     { id: 1003, username: 'user3@gmail.com', password: '345' },
-    //     { id: 1004, username: 'user4@gmail.com', password: '456' },
-    //     { id: 1005, username: 'user5@gmail.com', password: '567' }
-    // ]
+  // const users =[
+  //     { id: 1001, username: 'user1@gmail.com', password: '123' },
+  //     { id: 1002, username: 'user2@gmail.com', password: '234' },
+  //     { id: 1003, username: 'user3@gmail.com', password: '345' },
+  //     { id: 1004, username: 'user4@gmail.com', password: '456' },
+  //     { id: 1005, username: 'user5@gmail.com', password: '567' }
+  // ]
 
-    // const errors = {
-    //     uname: "Invalid username",
-    //     pass: "Invalid password"
-    //   };
+  // const errors = {
+  //     uname: "Invalid username",
+  //     pass: "Invalid password"
+  //   };
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    
-    //     var { uname, pass } = document.forms[0];
-    //     const userData = users.find((user) => user.username === uname.value);
-    //     if (userData) {
-    //         if (userData.password !== pass.value) {
-    //             setErrorMessages({ name: "pass", message: errors.pass });
-    //         } else {
-    //             setIsSubmitted(true);
-    //             setIsLoggedIn(true);
-    //             setUser(userData);
-    //             setShowLoginForm(false);
-    //         }
-    //         } else {
-    //           setErrorMessages({ name: "uname", message: errors.uname });
-    //         }
-    //       };
-        
-    //       const handleLogout = () => {
-    //         setIsLoggedIn(false);
-    //         setUser(null);
-    //         setIsSubmitted(false);
-    //       };
+  // const handleSubmit = (event) => {
+  //     event.preventDefault();
 
-    //       const renderErrorMessage = (name) =>
-    //         name === errorMessages.name && (
-    //           <div className="error">{errorMessages.message}</div>
-    //         );
+  //     var { uname, pass } = document.forms[0];
+  //     const userData = users.find((user) => user.username === uname.value);
+  //     if (userData) {
+  //         if (userData.password !== pass.value) {
+  //             setErrorMessages({ name: "pass", message: errors.pass });
+  //         } else {
+  //             setIsSubmitted(true);
+  //             setIsLoggedIn(true);
+  //             setUser(userData);
+  //             setShowLoginForm(false);
+  //         }
+  //         } else {
+  //           setErrorMessages({ name: "uname", message: errors.uname });
+  //         }
+  //       };
 
-    //         const renderForm = (
-    //             <div>
-    //               <form onSubmit={handleSubmit}>
-    //                 <div className="input-container mb-3">
-    //                   <label className='form-label text-primary'>Username </label><br/>
-    //                   <input type="text" name="uname" className="form-control" required />
-    //                   {renderErrorMessage("uname")}
-    //                 </div>
-    //                 <div className="input-container">
-    //                   <label className='form-label text-primary'>Password </label>
-    //                   <input type="password" name="pass" className="form-control" required /><br/>
-    //                   <br/>
-    //                   {renderErrorMessage("pass")}
-    //                 </div>
-    //                 <div className="button-container text-center">
-    //                   <button className="btn btn-primary" type="submit" >Submit</button>
-    //                 </div>
-    //               </form>
-    //             </div>
-    //           );
+  //       const handleLogout = () => {
+  //         setIsLoggedIn(false);
+  //         setUser(null);
+  //         setIsSubmitted(false);
+  //       };
 
-    return (
-        <div>
-          <header id="header">
-          
-            <div className="container-fluid topbar">
-              <nav className="container d-flex justify-content-between pt-2 pb-2"  id='topbarnav'>
-                
-                <a className="navbar-brand" href="">
-                  <img src={logo} alt="Logo" width="150" height="50" onClick={()=>navigate("/")} />
-                </a>
-      
-                <div id="searchdiv" className="d-none d-sm-none d-md-flex">
-      
-                  <input type="search" name="search" id="searchbar" placeholder="What can we help you Find?" />
-                </div>
-      
-                <div id="iconsdiv" className="iconsdiv">
+  //       const renderErrorMessage = (name) =>
+  //         name === errorMessages.name && (
+  //           <div className="error">{errorMessages.message}</div>
+  //         );
 
-                  {/* <img src={logIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } /> */}
-                  {/* {localStorage.getItem("id")!== undefined ? setLogIcon(<IoPerson/>): setLogIcon(<LuLogOut/>)} */}
-                  {/* {isUserLogin?<IoPerson/>:<LuLogOut/>} */}
-                 <div onClick={()=>handleLogClick()} style={{cursor:"pointer"}}> {logIcon}
-                 </div>
-                  <a href="">
-                    <img src={bookmarkIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/wishlist")}/>
-                  </a>
-      
-                  <a href="" >
-                    <img src={cartIcon} alt="icon" width="40" height="20" onClick={()=>navigate("/cart")}/>
-                  </a>
-                  
-                </div>
-              </nav>
-                
-                {/* {isLoggedIn? alert("User is successfully logged in"):<div></div>} */}
+  //         const renderForm = (
+  //             <div>
+  //               <form onSubmit={handleSubmit}>
+  //                 <div className="input-container mb-3">
+  //                   <label className='form-label text-primary'>Username </label><br/>
+  //                   <input type="text" name="uname" className="form-control" required />
+  //                   {renderErrorMessage("uname")}
+  //                 </div>
+  //                 <div className="input-container">
+  //                   <label className='form-label text-primary'>Password </label>
+  //                   <input type="password" name="pass" className="form-control" required /><br/>
+  //                   <br/>
+  //                   {renderErrorMessage("pass")}
+  //                 </div>
+  //                 <div className="button-container text-center">
+  //                   <button className="btn btn-primary" type="submit" >Submit</button>
+  //                 </div>
+  //               </form>
+  //             </div>
+  //           );
+
+  return (
+    <div>
+      <header id="header">
+        <div className="container-fluid topbar">
+          <nav
+            className="container d-flex justify-content-between pt-2 pb-2"
+            id="topbarnav"
+          >
+            <a className="navbar-brand" href="">
+              <img
+                src={logo}
+                alt="Logo"
+                width="150"
+                height="50"
+                onClick={() => navigate("/")}
+              />
+            </a>
+
+            <div id="searchdiv" className="d-none d-sm-none d-md-flex">
+              <input
+                type="search"
+                name="search"
+                id="searchbar"
+                placeholder="What can we help you Find?"
+              />
             </div>
-            {/* <nav className="navbar navbar-expand-md" id="menu">
+
+            <div id="iconsdiv" className="iconsdiv">
+              {/* <img src={logIcon} alt="Login" width="40" height="20" style={{cursor:"pointer"}} onClick={() =>   navigate("/login") } /> */}
+              {/* {localStorage.getItem("id")!== undefined ? setLogIcon(<IoPerson/>): setLogIcon(<LuLogOut/>)} */}
+              {/* {isUserLogin?<IoPerson/>:<LuLogOut/>} */}
+              <div
+                onClick={() => handleLogClick()}
+                style={{ cursor: "pointer" }}
+              >
+                {" "}
+                {logIcon}
+              </div>
+              <a href="">
+                <img
+                  src={bookmarkIcon}
+                  alt="icon"
+                  width="40"
+                  height="20"
+                  onClick={() => navigate("/wishlist")}
+                />
+              </a>
+
+              <a href="">
+                <img
+                  src={cartIcon}
+                  alt="icon"
+                  width="40"
+                  height="20"
+                  onClick={() => navigate("/cart")}
+                />
+              </a>
+            </div>
+          </nav>
+
+          {/* {isLoggedIn? alert("User is successfully logged in"):<div></div>} */}
+        </div>
+        {/* <nav className="navbar navbar-expand-md" id="menu">
               <button className="navbar-toggler toggler_btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle Navigation">
                 <span className="navbar-toggler-icon custom-toggler"></span>
               </button>
@@ -169,14 +199,14 @@ export function Header(){
                 </ul>
               </div>
             </nav> */}
-            {/* {showLoginForm && !isLoggedIn && (
+        {/* {showLoginForm && !isLoggedIn && (
                     <div className="login-form">
                     {renderForm}
                     </div>
                 )} */}
-          </header>
-        </div>
-    )
+      </header>
+    </div>
+  );
 }
 
 export default Header;
